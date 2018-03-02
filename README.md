@@ -1,9 +1,14 @@
+
 Marketers use the Optimove Relationship Marketing Hub to automate the execution of highly-personalized customer communications. Optimove offers its clients an efficient way to report data from their websites and trigger campaigns accordingly.
 This guide will show you how to setup the Web SDK (using JavaScript) in order to:
 * Tracking visitor and customer actions and events in realtime
 * Triggering realtime personalized campaigns (such as activity-triggered website pop-ups)
 * Enable Cookie matching with the Google Display Network
 The Web SDK is supported for both desktop and mobile web browsers.
+
+
+----------
+
 
 # Basic Setup
 You can also watch our [webinar](https://academy.optimove.com/customer-retention/webinar-optimove-web-sdk-basic-setup) for more information on how to integrate the basic setup.
@@ -56,6 +61,10 @@ Use the Advanced Setup (optional) in order to:
 As described in Reporting Custom Events, this step requires collaboration between you and Optimove’s Integration Team. Please contact your Optimove Customer Success Manager (CSM) or Optimove point of contact to schedule a meeting with the Product Integration team.
 
 **Note**: You can deploy the basic setup, followed by adding the advanced setup at a later stage. The Basic Setup is a pre-requisite.
+
+
+----------
+
 
 # **Track**
 ### Linking Website Visitors to Registered Customer IDs 
@@ -156,12 +165,6 @@ Sample usage 2 - including event:
     }
     optimoveSDK.API.registerUser(userId, email, eventName, parameters);
 
-### **Google Display Network Cookie Matching**
-Optimove can be used to automate the targeting of Google AdWords campaigns to specific customers and/or website visitors. AdWords ads are displayed across the [Google Display Network](https://github.com/optimoveintegrationoptitrack/GDN), which includes Google search, Google Finance, Gmail, Blogger and YouTube. Learn more at [Optimove-Google Display Network Integration](https://github.com/optimoveintegrationoptitrack/GDN).
-In order to use Optimove to automate AdWords campaigns, you need to link, or "match," Google Customer IDs with Optimove Customer IDs and/or Visitor IDs. This is very easy to do with the Optimove Web SDK: all you need to do is call the setUserId or registerUser functions described above.
-
-**Note**: Cookie matching for website visitors (non-registered users/customers) is only available if you have implemented basic setup of the Web SDK.
-
 ### ****Reporting Custom Events****
 Optimove clients may use the Optimove Web SDK to track specific customer actions and other custom events to Optimove (beyond the OOTB events such as page visits and email addresses). This data is used for tracking visitor and customer behavior, targeting campaigns to specific visitor and/or customer segments and triggering realtime campaigns based on particular visitor and/or customer actions/events.
 Each Optimove client has a tailored set of customer actions that may be reported via the SDK. As mentioned above, you will collaborate with the Optimove Integration Team to define the particular set of custom events that your website will be able to report (both for tracking and triggering realtime campaign execution purposes). This approach allows you to define any event and its associated parameters.
@@ -188,19 +191,10 @@ For example, a gaming site’s Report Win event might be reported using code lik
 
 ### **How to Report an Custom Event using server-side programming**
 At this time, events reported in this way will only be used by the Optimove realtime functionality. 
+[Click here](https://github.com/optimoveproductintegration/Reporting-Server-Side-Custom-Events) to see how to report custom events using server side programming.
 
-You can also report events from the webserver or any other back-end system using an HTTPS POST request, in the following format:
-https://gateway.optimove.events/reportEvent
-JSON payload:
+----------
 
-    {
-      tid: [realtime Token],
-      cid: [CustomerID],
-      eid: [EventID], 
-      context: {ContextName:ContextVal} 
-    }
-
-**Note**: At this time, events reported in this way will only be used by the Optimove realtime functionality, in order to execute realtime campaigns, but will not be processed by scheduled campaigns for tracking purposes. In the near future, the Optimove SDK will also support reporting server-side events for use by scheduled campaigns.
 
 # **Trigger**
 
@@ -253,3 +247,10 @@ You can also trigger Optimove realtime campaigns using Optimove’s APIs:
 * To view your realtime API payload, please refer to [Optimove Realtime Execution Channels](https://docs.optimove.com/optimove-realtime-execution-channels/) (see Method 3: Realtime API) 
 For more information on how to acquire an API key to use Optimove APIs, please request one from your CSM or your Optimove point of contact.
 
+
+----------
+## **Google Display Network Cookie Matching**
+Optimove can be used to automate the targeting of Google AdWords campaigns to specific customers and/or website visitors. AdWords ads are displayed across the [Google Display Network](https://github.com/optimoveintegrationoptitrack/GDN), which includes Google search, Google Finance, Gmail, Blogger and YouTube. Learn more at [Optimove-Google Display Network Integration](https://github.com/optimoveintegrationoptitrack/GDN).
+In order to use Optimove to automate AdWords campaigns, you need to link, or "match," Google Customer IDs with Optimove Customer IDs and/or Visitor IDs. This is very easy to do with the Optimove Web SDK: all you need to do is call the setUserId or registerUser functions described above.
+
+**Note**: Cookie matching for website visitors (non-registered users/customers) is only available if you have implemented basic setup of the Web SDK.
