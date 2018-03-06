@@ -34,7 +34,7 @@ The following code snippet must be added to every page in your website, either b
 
     <script src="https://sdk-cdn.optimove.net/websdk/sdk-vSDKVersion.js"></script>
     <script type="text/javascript">
-       `optimoveSDK.initialize("TenantToken", "ConfigVersion", function(){
+       optimoveSDK.initialize("TenantToken", "ConfigVersion", function(){
           // events may be called here
        }, "info");
     </script>
@@ -80,7 +80,7 @@ identified by a persistent site cookie).
 
 Sample usage:
 
-    Var public_customer_ID = '123456';
+    var public_customer_ID = '123456';
     If(public_customer_ID) {optimoveSDK.API.setUserID(public_customer_ID);}
 
 This function (or, alternatively, the registerUser function) must also be called to effect Google cookie matching when using Optimove with the [Google Display Network](https://github.com/optimoveintegrationoptitrack/GDN).
