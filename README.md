@@ -14,7 +14,7 @@ The Web SDK is supported for both desktop and mobile web browsers.
 
 ----------
 
-# Basic Setup<a id="basic-setup"></a>
+# <a id="basic-setup"></a>Basic Setup
 You can also watch our [webinar](https://academy.optimove.com/customer-retention/webinar-optimove-web-sdk-basic-setup) for more information on how to integrate the basic setup.
  
 Use the Basic Setup (required) in order to:
@@ -52,7 +52,7 @@ You will also need to include the following steps below to complete the basic se
 * Tracking Page Visits
 * Recording/Updating User Email Addresses
 
-# Advanced Setup<a id="advanced-setup"></a>
+# <a id="advanced-setup"></a>Advanced Setup
 
 Use the Advanced Setup (optional) in order to:
 
@@ -70,8 +70,8 @@ As described in Reporting Custom Events, this step requires collaboration betwee
 ----------
 
 
-# Track<a id="track"></a>
-### Linking Website Visitors to Registered Customer IDs<a id="link-visit-customer"></a>
+# <a id="track"></a>Track
+### <a id="link-visit-customer"></a>Linking Website Visitors to Registered Customer IDs
 
 In order for all event reporting and realtime functions to be properly associated with the correct individual customer, the setUserId function must be called:
 
