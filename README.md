@@ -71,7 +71,7 @@ As described in Reporting Custom Events, this step requires collaboration betwee
 
 
 # Track<a id="track"></a>
-### Linking Website Visitors to Registered Customer IDs<a id="track-visitor-customer"></a>
+### Linking Website Visitors to Registered Customer IDs<a id="link-visit-customer"></a>
 
 In order for all event reporting and realtime functions to be properly associated with the correct individual customer, the setUserId function must be called:
 
@@ -94,7 +94,7 @@ This function (or, alternatively, the registerUser function) must also be called
 * If you will be sending encrypted customerID, please follow the steps in “Reporting encrypted CustomerIDs
 * In instances where you need to set both the visitor's user ID and email address simultaneously, you should use the registerUser function instead of setUserId. This applies to all situations in which a single user action requires you to set both the user ID and email address (e.g., registration, newsletter signup).
 
-### Tracking Page Visits<a id="page-visits"></a>
+### Tracking Page Visits<a id="track-visits"></a>
 You must implement the following OOTB function call on every page of the website to ensure that accurate user counts and session time metrics are collected. 
 
     optimoveSDK.API.setPageVisit(PageURL, PageTitle, PageCategory);
