@@ -1,8 +1,8 @@
  - [Basic Setup](#basic-setup) 
  - [Advanced Setup](#advanced-setup)
  - [Track](#track) 
-	- [Linking Website Visitors to Registered Customer IDs](#Linking Website Visitors to Registered Customer IDs) 
-	- [Tracking Page Visits](#Tracking Page Visits) 
+	 - [Linking Website Visitors to Registered Customer IDs ](#Linking-Website-Visitors-to-Registered-Customer- IDs ) 
+	- [Tracking Page Visits](#Tracking-Page-Visits) 
  - [Trigger](#trigger)
 
 Marketers use the Optimove Relationship Marketing Hub to automate the execution of highly-personalized customer communications. Optimove offers its clients an efficient way to report data from their websites and trigger campaigns accordingly.
@@ -70,8 +70,8 @@ As described in Reporting Custom Events, this step requires collaboration betwee
 ----------
 
 
-# **Track**
-### Linking Website Visitors to Registered Customer IDs 
+# **[Track]**
+### [Linking Website Visitors to Registered Customer IDs]
 
 In order for all event reporting and realtime functions to be properly associated with the correct individual customer, the setUserId function must be called:
 
