@@ -101,7 +101,7 @@ This function (or, alternatively, the registerUser function) must also be called
 * If you will be sending encrypted customerID, please follow the steps in “Reporting encrypted CustomerIDs
 * In instances where you need to set both the visitor's user ID and email address simultaneously, you should use the registerUser function instead of setUserId. This applies to all situations in which a single user action requires you to set both the user ID and email address (e.g., registration, newsletter signup).
 
-### Tracking Page Visits<a id="track-visits"></a>
+### <a id="track-visits"></a>Tracking Page Visits
 You must implement the following OOTB function call on every page of the website to ensure that accurate user counts and session time metrics are collected. 
 
     optimoveSDK.API.setPageVisit(PageURL, PageTitle, PageCategory);
