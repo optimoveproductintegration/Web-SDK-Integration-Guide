@@ -1,4 +1,5 @@
 
+
 Marketers use the Optimove Relationship Marketing Hub to automate the execution of highly-personalized customer communications. Optimove offers its clients an efficient way to report data from their websites and trigger campaigns accordingly.
 This guide will show you how to setup the Web SDK (using JavaScript) in order to:
 * Tracking visitor and customer actions and events in realtime
@@ -69,7 +70,7 @@ As described in Reporting Custom Events, this step requires collaboration betwee
 # **Track**
 ### Linking Website Visitors to Registered Customer IDs 
 
-In order for all event reporting and realtime functions to be properly associated with the correct individual customer, the setUserID function must be called:
+In order for all event reporting and realtime functions to be properly associated with the correct individual customer, the setUserId function must be called:
 
 (a) whenever a customer initially registers (or, alternatively, the registerUser function), and also 
 
@@ -81,7 +82,7 @@ identified by a persistent site cookie).
 Sample usage:
 
     var public_customer_ID = '123456';
-    If(public_customer_ID) {optimoveSDK.API.setUserID(public_customer_ID);}
+    If(public_customer_ID != 'undefined') {optimoveSDK.API.setUserId(public_customer_ID);}
 
 This function (or, alternatively, the registerUser function) must also be called to effect Google cookie matching when using Optimove with the [Google Display Network](https://github.com/optimoveintegrationoptitrack/GDN).
 
