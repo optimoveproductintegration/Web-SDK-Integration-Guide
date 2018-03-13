@@ -1,6 +1,8 @@
  - [Basic Setup](#basic-setup) 
  - [Advanced Setup](#advanced-setup)
  - [Track](#track) 
+	- [Linking Website Visitors to Registered Customer IDs](#Linking Website Visitors to Registered Customer IDs) 
+	- [Tracking Page Visits](#Tracking Page Visits) 
  - [Trigger](#trigger)
 
 Marketers use the Optimove Relationship Marketing Hub to automate the execution of highly-personalized customer communications. Optimove offers its clients an efficient way to report data from their websites and trigger campaigns accordingly.
@@ -10,9 +12,7 @@ This guide will show you how to setup the Web SDK (using JavaScript) in order to
 * Enable Cookie matching with the Google Display Network
 The Web SDK is supported for both desktop and mobile web browsers.
 
-
 ----------
-
 
 # [Basic Setup]
 You can also watch our [webinar](https://academy.optimove.com/customer-retention/webinar-optimove-web-sdk-basic-setup) for more information on how to integrate the basic setup.
