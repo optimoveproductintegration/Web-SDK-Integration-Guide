@@ -1,4 +1,7 @@
-
+ - [Basic Setup](#basic-setup) 
+ - [Advanced Setup](#advanced-setup)
+ - [Track](#track) 
+ - [Trigger](#trigger)
 
 Marketers use the Optimove Relationship Marketing Hub to automate the execution of highly-personalized customer communications. Optimove offers its clients an efficient way to report data from their websites and trigger campaigns accordingly.
 This guide will show you how to setup the Web SDK (using JavaScript) in order to:
@@ -11,7 +14,7 @@ The Web SDK is supported for both desktop and mobile web browsers.
 ----------
 
 
-# Basic Setup
+# [Basic Setup]
 You can also watch our [webinar](https://academy.optimove.com/customer-retention/webinar-optimove-web-sdk-basic-setup) for more information on how to integrate the basic setup.
  
 Use the Basic Setup (required) in order to:
@@ -49,7 +52,7 @@ You will also need to include the following steps below to complete the basic se
 * Tracking Page Visits
 * Recording/Updating User Email Addresses
 
-# Advanced Setup 
+# [Advanced Setup]
 
 Use the Advanced Setup (optional) in order to:
 
