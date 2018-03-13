@@ -26,8 +26,8 @@
                 **public_customer_ID needs to be the identical customerID as you send in your daily data transfer
                 **public_customer_ID can be numberic/string, depending on your daily transfer
             */
-            If(public_customer_ID AND public_customer_ID != null) {
-                optimoveSDK.API.setUserID(public_customer_ID);
+            if (public_customer_ID != 'undefined') {
+                optimoveSDK.API.setUserId(public_customer_ID);
             }
 
             /********************************************************************************************************/
