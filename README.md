@@ -1,8 +1,8 @@
  - [Basic Setup](#basic-setup) 
  - [Advanced Setup](#advanced-setup)
  - [Track](#track) 
-	 - [Linking Website Visitors to Registered Customer IDs ](#Linking-Website-Visitors-to-Registered-Customer-IDs ) 
-	- [Tracking Page Visits](#Tracking-Page-Visits) 
+	 - [Linking Website Visitors to Registered Customer IDs ](#link-visit-customer) 
+	- [Tracking Page Visits](#track-visits) 
  - [Trigger](#trigger)
 
 Marketers use the Optimove Relationship Marketing Hub to automate the execution of highly-personalized customer communications. Optimove offers its clients an efficient way to report data from their websites and trigger campaigns accordingly.
@@ -14,7 +14,7 @@ The Web SDK is supported for both desktop and mobile web browsers.
 
 ----------
 
-# [Basic Setup]
+# Basic Setup<a id="basic-setup"></a>
 You can also watch our [webinar](https://academy.optimove.com/customer-retention/webinar-optimove-web-sdk-basic-setup) for more information on how to integrate the basic setup.
  
 Use the Basic Setup (required) in order to:
@@ -52,7 +52,7 @@ You will also need to include the following steps below to complete the basic se
 * Tracking Page Visits
 * Recording/Updating User Email Addresses
 
-# [Advanced Setup]
+# Advanced Setup<a id="advanced-setup"></a>
 
 Use the Advanced Setup (optional) in order to:
 
@@ -70,8 +70,8 @@ As described in Reporting Custom Events, this step requires collaboration betwee
 ----------
 
 
-# [Track]
-### [Linking Website Visitors to Registered Customer IDs]
+# Track<a id="track"></a>
+### Linking Website Visitors to Registered Customer IDs<a id="track-visitor-customer"></a>
 
 In order for all event reporting and realtime functions to be properly associated with the correct individual customer, the setUserId function must be called:
 
@@ -94,7 +94,7 @@ This function (or, alternatively, the registerUser function) must also be called
 * If you will be sending encrypted customerID, please follow the steps in “Reporting encrypted CustomerIDs
 * In instances where you need to set both the visitor's user ID and email address simultaneously, you should use the registerUser function instead of setUserId. This applies to all situations in which a single user action requires you to set both the user ID and email address (e.g., registration, newsletter signup).
 
-### [Tracking Page Visits]
+### Tracking Page Visits<a id="page-visits"></a>
 You must implement the following OOTB function call on every page of the website to ensure that accurate user counts and session time metrics are collected. 
 
     optimoveSDK.API.setPageVisit(PageURL, PageTitle, PageCategory);
