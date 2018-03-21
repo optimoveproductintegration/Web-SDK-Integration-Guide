@@ -220,10 +220,10 @@ When triggered, the HTML template selected by the marketer when creating the cam
  2. **Option 1**: By default, Optimove will automatically handle the execution of displaying popups without additional code implementation on your side.
  3. **Option 2**: If you want to customize some popup settings, or replace the code that displays the popup with your own code, you can
     do this 
-    	 3a. Implement the `setRealTimeOptions()` function (see Webpage Pop-ups function below) once per page lifecycle, with the relevant options as described below. This must be called immediately after initiating the SDK
+    	 3a. Implement the `setRealTimeOptions()` function (see [Webpage Pop-ups function](#pp-function) below) once per page lifecycle, with the relevant options as described below. This must be called immediately after initiating the SDK
  4. Once enabled, log into your Optimove site to create the relevant templates and execute pop-ups. 
 
-**Webpage Pop-ups function**
+<a id="pp-function"></a>**Webpage Pop-ups function**
 
     var options = {
     	    showDimmer : true,
