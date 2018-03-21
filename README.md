@@ -214,25 +214,27 @@ The Optimove Web SDK provides a website popup functionality, which can be used t
 
 When triggered, the HTML template selected by the marketer when creating the campaign will be sent to end-customer/user and Optimove’s embedded code will display the popup. If you prefer, you can override this functionality in order to serve the popup yourself, using the reportEventCallback option (see below).
 
-**How to enable pop-ups in your website:**
+**How to enable the Webpage Pop-ups**
  1. Contact your CSM or Optimove point of contact to enable this
     feature.
  2. **Option 1**: By default, Optimove will automatically handle the execution of displaying popups without additional code implementation on your side.
  3. **Option 2**: If you want to customize some popup settings, or replace the code that displays the popup with your own code, you can
     do this 
-    	 4. Implement the `setRealTimeOptions()` function once per page lifecycle, with the relevant options as described below. This must
-    be called immediately after initiating the SDK
- -
-   
-	var options = {
-		    showDimmer : true,
-		    showWatermark : true,
-		    reportEventCallback : function(response){
-			    //insert here your own code to show the popup if necessary
-		    }
-	}
-	optimoveSDK.API.setRealTimeOptions(options);
+    	 3a. Implement the `setRealTimeOptions()` function (see Webpage Pop-ups function below) once per page lifecycle, with the relevant options as described below. This must be called immediately after initiating the SDK
+ 4. Once enabled, log into your Optimove site to create the relevant templates and execute pop-ups. 
 
+**Webpage Pop-ups function**
+
+    var options = {
+    	    showDimmer : true,
+    	    showWatermark : true,
+    	    reportEventCallback : function(response){
+    		    //insert here your own code to show the popup if necessary
+    	    }
+    }
+    optimoveSDK.API.setRealTimeOptions(options);
+
+**Notes:**
 * **showDimmer**: Dims the rest of the page around the popup box (type is Boolean; default is True)
 * **showWatermark**: Shows the Optimove watermark under the popup (type is Boolean; default is True)
 * **reportEventCallback**: Provides a own callback function that will be called if Optimove determines that a popup should be displayed. You use this option to override the Optimove popup in order to display your own, using your own code. In this event, the response argument will appear as: 
@@ -249,9 +251,6 @@ When triggered, the HTML template selected by the marketer when creating the cam
 	      "Data": <HTML template>  // when a campaign was triggered
 	    }
 	    
- 4. Once enabled, log into your Optimove site to create the relevant templates and execute pop-ups. 
-
-
 ### <a id="trigger-optimail"></a>Executing via Optimail
 Ability to execute campaigns using Optimove’s Optimail email service provider (ESP) add-on product. With Optimail you will be able to:
 * Send HTML email campaigns
@@ -267,3 +266,4 @@ You can also trigger Optimove realtime campaigns using Optimove’s APIs:
 * Register listener to receive realtime campaign notifications, please refer to RegisterEventListener (where eventid = 11)
 * To view your realtime API payload, please refer to [Optimove Realtime Execution Channels](https://docs.optimove.com/optimove-realtime-execution-channels/) (see Method 3: Realtime API) 
 For more information on how to acquire an API key to use Optimove APIs, please request one from your CSM or your Optimove point of contact.
+
