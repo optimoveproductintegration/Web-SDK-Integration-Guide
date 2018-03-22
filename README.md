@@ -266,4 +266,3 @@ You can also trigger Optimove realtime campaigns using Optimove’s APIs:
 * Register listener to receive realtime campaign notifications, please refer to RegisterEventListener (where eventid = 11)
 * To view your realtime API payload, please refer to [Optimove Realtime Execution Channels](https://docs.optimove.com/optimove-realtime-execution-channels/) (see Method 3: Realtime API) 
 For more information on how to acquire an API key to use Optimove APIs, please request one from your CSM or your Optimove point of contact.
-
