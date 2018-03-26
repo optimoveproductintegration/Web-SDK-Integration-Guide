@@ -1,3 +1,4 @@
+
  - [Basic Setup](#basic-setup) 
  - [Advanced Setup](#advanced-setup)
  - [Track](#track) 
@@ -177,10 +178,10 @@ Sample usage 2 - including event:
     optimoveSDK.API.registerUser(userId, email, eventName, parameters);
 
 ### <a id="custom-events"></a>Reporting Custom Events
-Optimove clients may use the Optimove Web SDK to track specific customer actions and other custom events to Optimove (beyond the OOTB events such as page visits and email addresses). This data is used for tracking visitor and customer behavior, targeting campaigns to specific visitor and/or customer segments and triggering realtime campaigns based on particular visitor and/or customer actions/events.
-Each Optimove client has a tailored set of customer actions that may be reported via the SDK. As mentioned above, you will collaborate with the Optimove Integration Team to define the particular set of custom events that your website will be able to report (both for tracking and triggering realtime campaign execution purposes). This approach allows you to define any event and its associated parameters.
-Once you and the Optimove Integration Team have together defined the custom events supported by your site, the Integration Team will implement your particular functions within your Optimove site, while you will be responsible for implementing the reporting of the individual events within your website using the appropriate function calls.
-To see examples of Custom Events, please visit Defining the Set of Custom Tracking Events that You Will Report for more information.
+Optimove clients may use the Optimove Web SDK to track specific customer actions and other custom events to Optimove (beyond events such as page visits and email addresses). This data is used for tracking visitor and customer behavior, targeting campaigns to specific visitor and/or customer segments and triggering realtime campaigns based on particular visitor and/or customer actions/events.<br/>
+Each Optimove client has a tailored set of customer actions that may be reported via the SDK. As mentioned above, you will collaborate with the Optimove Product Integration Team to define the particular set of custom events that your website will be able to report (both for tracking and triggering realtime campaign execution purposes). This approach allows you to define any event and its associated parameters.<br/>
+Once you and the Optimove Product Integration Team have together defined the custom events supported by your site, the Integration Team will implement your particular functions within your Optimove site, while you will be responsible for implementing the reporting of the individual events within your website using the appropriate function calls.<br/>
+To see examples of Custom Events, please visit [Defining the Set of Custom Tracking Events](https://github.com/optimove-tech/SDK-Custom-Events-for-Your-Vertical) that You Will Report for more information.<br/>
 Note: While you can always add/change the custom events and parameters at a later date (by speaking with the Optimove Integration Team), only the particular custom events that you and the Optimove Integration Team have already defined together will be supported by your Optimove site.
 
 ### How to Report an Custom Event from Within a Webpage
