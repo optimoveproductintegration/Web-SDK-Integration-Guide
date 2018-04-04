@@ -95,7 +95,7 @@ Sample usage:
     var public_customer_ID = '123456';
     If(public_customer_ID != 'undefined') {optimoveSDK.API.setUserId(public_customer_ID);}
 
-This function (or, alternatively, the registerUser function) must also be called to effect Google cookie matching when using Optimove with the [Google Display Network](https://github.com/optimoveintegrationoptitrack/GDN).
+This function (or, alternatively, the registerUser function) must also be called to effect Google cookie matching when using Optimove with the [Google Display Network](https://github.com/optimove-tech/GDN).
 
 **Notes**:
 * The Public Customer ID above refers to the unique customer ID used by your website to identify registered customers/users and which are used to identify individual customer records within your Optimove customer database.
