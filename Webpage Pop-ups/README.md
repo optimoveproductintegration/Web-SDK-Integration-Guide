@@ -38,7 +38,7 @@ There is however specific metadata (dimmer and watermark) that can be modified f
 ### <a id="option2"></a>Webpage Pop-Up: Option 2 (Callback)
 If you prefer, you can override Optimove's webpage pop-up functionality in order to serve the popup yourself. This means, by calling the  `reportEventCallback` function (see [Webpage Pop-ups Functions and Options](#webpage-pop-ups-function)), you will be able to retrieve the marketer's message/HTML coming from Optimove campaign and display it in your website according to your own popup/banner functionality.
 <br/>
-### [](#webpage-pop-ups-function)Webpage Pop-ups Functions and Options
+### <a id="webpage-pop-ups-function"></a>Webpage Pop-ups Functions and Options
 
 **Options & Function code snippet**
 ```
