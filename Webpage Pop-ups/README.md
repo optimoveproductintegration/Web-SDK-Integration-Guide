@@ -90,10 +90,13 @@ OR
 2. Choose Web Pop-Up
 3. Create a pop-up page
 4. Import your popup HTML file
+
 	5. **HTML Note:** No need to insert `<html>, <head>, <body> ` tags as this is inherited from your parent website. Only insert the HTML tags that will be within the `<body>` tag, such as `<div>, <img>, <table>` and more.
+	
 	6. **JavaScript Note**: You can insert Optimove Web SDK JavaScript calls, such as `reportEvent()`, `setUserEmail()`, and more.
-7. Preview the added HTML
-8. Save
+	
+6. Preview the added HTML
+7. Save
 
 ### <a id="triggers"></a>Create Realtime Triggers
 
@@ -106,7 +109,9 @@ OR
  1. Go to # Manage Target Groups in your Optimove site
  2. Choose the template you have created for this webpage pop-up
  3. Click on Criteria tab and select the Target Group
+ 
 	 4. **Note**: In order to test in within your staging front-end website, the public_customer_id must be the identical as in your production website, otherwise you will not be able to trigger the webpage pop-up on your staging website
+	 
 5. Click on Realtime Campaigns tab
 6. Add realtime campaigns trigger and campaign details
 7. After creating the template, triggers and campaign, go to your website and create the journey that will trigger the realtime campaign you have created 
