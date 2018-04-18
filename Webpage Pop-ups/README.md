@@ -19,6 +19,7 @@ When triggered, the HTML template selected by the marketer when creating the cam
 
 ## <a id="getting-started"></a>Getting Started
 
+
 ### <a id="enabling"></a>Enabling Webpage Pop-Ups using Optimove Web SDK
 
 1.  During your Web SDK Integration, request from Optimove Product Integration team to enable one of the Webpage Pop-Ups options below (Default / Callback).
