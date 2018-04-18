@@ -18,7 +18,6 @@ When triggered, the HTML template selected by the marketer when creating the cam
 <hr>
 
 ## <a id="getting-started"></a>Getting Started
-<br/>
 
 ### <a id="enabling"></a>Enabling Webpage Pop-Ups using Optimove Web SDK
 
@@ -30,6 +29,7 @@ When triggered, the HTML template selected by the marketer when creating the cam
 	2b.  **Option 2 (Callback)**: This will give you the ability to override Optimove's webpage pop-up functionality (#2a) and implement your own. See [Webpage Pop-Up: Option 2 (Callback)](#option2)
 4.  Once enabled, log into your Optimove site to create the relevant templates and execute pop-ups. See [Creating Webpage Pop-up campaign in Optimove Site](#create-popup-in-site).
 <br/>
+
 ### <a id="option1"></a>Webpage Pop-Up: Option 1 (Default)
 By creating a webpage pop-up campaign in your Optimove site (see [Creating Webpage Pop-up campaign in Optimove Site](#create-popup-in-site)), this will automatically allow you to execute and display the relevant pop-up. [Optimove Web SDK](https://github.com/optimove-tech/Web-SDK-Integration-Guide) already consists of this functionality and there is no additional code implementation required.
 
