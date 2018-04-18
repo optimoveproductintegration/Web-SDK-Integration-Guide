@@ -103,12 +103,16 @@ OR
 	4b. **CSS**: You can style the html tags by using in-line css, such as:
 
 
-			<div markdown="1" id="div-id" style="background-color:white;height:300px;width:300px">
-			    Lorem ipsum dolor sit amet.
-			</div>
-	
-
+		<div markdown="1" id="div-id" style="background-color:white;height:300px;width:300px">
+		    Lorem ipsum dolor sit amet.
+		</div>
+		
 	4c. **JavaScript**: You can insert Optimove Web SDK JavaScript calls, such as `reportEvent()`, `setUserEmail()`, and more.
+
+
+		<div markdown="1" id="div-id" style="background-color:white;height:300px;width:300px">
+		   optimoveSDK.API.setUserEmail('Lorem@ipsum.com').
+		</div>
 			
 8.   Preview the added HTML
 9. Save
