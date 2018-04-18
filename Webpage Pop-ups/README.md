@@ -91,9 +91,17 @@ OR
 3. Create a pop-up page
 4. Import your popup HTML file
 
-	5. **HTML Note:** No need to insert `<html>, <head>, <body> ` tags as this is inherited from your parent website. Only insert the HTML tags that will be within the `<body>` tag, such as `<div>, <img>, <table>` and more.
+	5. **HTML:** No need to insert `<html>, <head>, <body> ` tags as this is inherited from your parent website. Only insert the HTML tags that will be within the `<body>` tag, such as `<div>, <img>, <table>` and more.
 	
-	6. **JavaScript Note**: You can insert Optimove Web SDK JavaScript calls, such as `reportEvent()`, `setUserEmail()`, and more.
+	7. **CSS**: You can style the html tags by using in-line css, such as:
+	
+	<div  style="background-color:#ECECEC;height:300px;width:300px"  id="div-id">
+	Lorem ipsum dolor sit amet.<br/>
+	<img  src="http://">
+	</div>
+
+    
+	8. **JavaScript**: You can insert Optimove Web SDK JavaScript calls, such as `reportEvent()`, `setUserEmail()`, and more.
 	
 6. Preview the added HTML
 7. Save
