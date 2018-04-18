@@ -6,7 +6,7 @@
     -   [Enabling Webpage Pop-Ups using Optimove Web SDK](#enabling)
     - [Webpage Pop-Up: Option 1 (Default)](#option1)
     - [Webpage Pop-Up: Option 2 (Callback)](#option2)
-    - [Webpage Pop-ups Options & Functions](#webpage-pop-ups-function)
+    - [Webpage Pop-ups Functions and Options](#webpage-pop-ups-function)
 -   **[Creating Webpage Pop-up campaign in Optimove Site](#create-popup-in-site)**
     -   [Create a Pop-up template](#templates)
     - [Create Realtime Triggers](#triggers)
@@ -33,12 +33,12 @@ When triggered, the HTML template selected by the marketer when creating the cam
 ### <a id="option1"></a>Webpage Pop-Up: Option 1 (Default)
 By creating a webpage pop-up campaign in your Optimove site (see [Creating Webpage Pop-up campaign in Optimove Site](#create-popup-in-site)), this will automatically allow you to execute and display the relevant pop-up. [Optimove Web SDK](https://github.com/optimove-tech/Web-SDK-Integration-Guide) already consists of this functionality and there is no additional code implementation required.
 
-There is however specific meta data that can be modified for your Optimove's webpage pop-up (see [Webpage Pop-ups Options & Functions](#webpage-pop-ups-function)) that is done by Optimove's Product Integration Manager. Please ask the Product Integration Manager to update the meta data as required.
+There is however specific meta data options that can be modified for your Optimove's webpage pop-up (see [Webpage Pop-ups Functions and Options](#webpage-pop-ups-function)) that is done by Optimove's Product Integration Manager. Please ask the Product Integration Manager to update the meta data options as required.
 <br/>
 ### <a id="option2"></a>Webpage Pop-Up: Option 2 (Callback)
-If you prefer, you can override Optimove's webpage pop-up functionality in order to serve the popup yourself. This means, by calling the  `reportEventCallback` function (see [Webpage Pop-ups Options & Functions](#webpage-pop-ups-function)), you will be able to retrieve the marketer's message/HTML coming from Optimove campaign and display it in your website according to your own popup/banner functionality.
+If you prefer, you can override Optimove's webpage pop-up functionality in order to serve the popup yourself. This means, by calling the  `reportEventCallback` function (see [Webpage Pop-ups Functions and Options](#webpage-pop-ups-function)), you will be able to retrieve the marketer's message/HTML coming from Optimove campaign and display it in your website according to your own popup/banner functionality.
 <br/>
-### [](#webpage-pop-ups-function)Webpage Pop-ups Options & Functions
+### [](#webpage-pop-ups-function)Webpage Pop-ups Functions and Options
 
 **Options & Function code snippet**
 ```
