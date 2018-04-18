@@ -64,7 +64,7 @@ optimoveSDK.API.setRealTimeOptions(options);
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|--------------------|
 | showDimmer          | Dims the rest of the page around the popup box                                                                                                                                                                                                                            | Boolean  | True               |
 | showWatermark       | Shows the Optimove watermark under the popup                                                                                                                                                                                                                             | Boolean  | True               |
-| reportEventCallback | Use this option to override the Optimove webpage pop-up in order to display your own. using your own code. In this event, the response argument will appear as:  | Function | [response arguments](#response-arg) (your code is optional) |
+| reportEventCallback | Use this option to override the Optimove webpage pop-up in order to display your own code. In this event, the response argument will appear as:  | Function | [response arguments](#response-arg) (optional: your code) |
 <br/>
 
 **<a id="response-arg"></a>Response Arguments**
