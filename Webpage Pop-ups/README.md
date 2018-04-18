@@ -18,7 +18,7 @@ When triggered, the HTML template selected by the marketer when creating the cam
 <hr>
 
 ## <a id="getting-started"></a>Getting Started
-
+<br/>
 
 ### <a id="enabling"></a>Enabling Webpage Pop-Ups using Optimove Web SDK
 
