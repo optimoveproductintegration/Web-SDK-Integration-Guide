@@ -1,0 +1,71 @@
+<script type="text/javascript">
+// ---------------------------------------
+//This will be your dynamic variables which will be used for the Optimove sdk
+//optimoveSDKToken = your sdk token provided by the Product Integration team
+//optimoveSDKVersion = the sdk version provided by the Product Integration team which also changes upon sdk upgrades
+//optimoveSDKconfigVersion = your event configuration file version provided by the Product Integration team which also changes upon event modifications
+// ---------------------------------------
+var optimoveSDKToken = 'your-token-code'; 
+var optimoveSDKVersion = '1.0.4'; 
+var optimoveSDKconfigVersion = 'your-config-version'; 
+
+// ---------------------------------------
+// Function: createOptimoveSDK
+// Args: resourceURL, callback
+// creates JS script that is async
+// ---------------------------------------
+function createOptimoveSDK(resourceURL, callback) {
+  
+  console.log('In createOptimoveSDK() '+resourceURL); 
+
+  if (resourceURL != null) {
+    var d = document;
+    var g = d.createElement('script');
+    var s = d.getElementsByTagName('script')[0];
+
+    g.type = 'text/javascript';
+    g.async = true;
+    g.defer = true;
+    g.src = resourceURL;
+    g.onload = callback;
+
+    s.parentNode.insertBefore(g, s);
+  }
+}
+
+// ---------------------------------------
+// Function: initializeOptimoveSDK
+// Args: --
+// initializes optimove SDK with sdk details provided to you by Product Integration team
+// ---------------------------------------
+function initializeOptimoveSDK() {
+  
+  console.log('In initializeOptimoveSDK()');
+
+  optimoveSDK.initialize(optimoveSDKToken, optimoveSDKconfigVersion, loadOptimoveSDKFunctions, 'info');
+}
+
+// ---------------------------------------
+// Function: loadOptimoveSDKFunctions
+// Args: status
+// where you call optimove sdk functions, such as setPageVisit()
+// ---------------------------------------
+function loadOptimoveSDKFunctions(status) {
+
+  console.log('In loadOptimoveSDKFunctions()  = ' + status);
+
+  var public_customer_ID = '{{clientId}}';
+
+  console.log('client= '+public_customer_ID);
+
+  //make sure to call setUserId() function ONLY when the registered user/customer is recognizable
+  if (public_customer_ID != 'undefined') {
+    optimoveSDK.API.setUserId(public_customer_ID);
+  }
+  
+  //Note: if you do not have a category, please add the title instead.
+  optimoveSDK.API.setPageVisit('{{page url}}', '{{page title}}', '{{page category/title}}');
+}
+
+createOptimoveSDK('https://sdk-cdn.optimove.net/websdk/sdk-v'+optimoveSDKVersion+'.js', initializeOptimoveSDK); 
+</script>
