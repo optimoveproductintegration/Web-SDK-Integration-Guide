@@ -8,16 +8,25 @@
     <meta name="author" content="Optimove Product Integration Team">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://sdk-cdn.optimove.net/websdk/sdk-v1.0.4.js"></script>
+    <script type="text/javascript">
+        // ---------------------------------------
+        //This will be your dynamic variables which will be used for the Optimove sdk
+        //optimoveSDKToken = your sdk token provided by the Product Integration team
+        //optimoveSDKVersion = the sdk version provided by the Product Integration team which also changes upon sdk upgrades
+        //optimoveSDKconfigVersion = your event configuration file version provided by the Product Integration team which also changes upon event modifications
+        // ---------------------------------------
+        var optimoveSDKToken = 'your-token-code'; 
+        var optimoveSDKVersion = '1.0.4'; 
+        var optimoveSDKconfigVersion = 'your-config-version'; 
+    </script>
+    
+    <script src="https://sdk-cdn.optimove.net/websdk/sdk-v"+optimoveSDKVersion+".js"></script>
 
     <script type="text/javascript">
-        //ConfigVersion should be dynamically changed when adding/modifing events
-        var config_version = "1.0.0";
 
         var public_customer_ID = "123456";
-        var sdk_token = "dff22133dfd0970123hkjchd8912jdwks123123fddfd9213d"; //must be string
 
-        optimoveSDK.initialize(sdk_token, config_version, function(){
+        optimoveSDK.initialize(optimoveSDKToken, optimoveSDKconfigVersion, function(){
 
             /* Linking Visitors to Registered Customers
                 **Only call this function if registered / identified customers is not empty, null, unidentified
@@ -36,6 +45,7 @@
                 **Must be called on every page of the website to ensure that accurate user counts and session time metrics are collected.
                 **Every page view is recorded, including repeated visits to the same page.
                 **Also supports Single Page Application - Product Integration can enable this for you
+                **Note: if you do not have a category, please add the title instead
             */
             function updateSDKPageVisit (PageURL, PageTitle, PageCategory) {
                 optimoveSDK.API.setPageVisit(PageURL, PageTitle, PageCategory);
