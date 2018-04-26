@@ -58,7 +58,8 @@ function loadOptimoveSDKFunctions(status) {
 
   console.log('client= '+public_customer_ID);
 
-  //make sure to call setUserId() function ONLY when the registered user/customer is recognizable
+  //Call setUserId() function ONLY when the registered user/customer is recognizable
+  //MUST be entered in string format
   if (public_customer_ID != 'undefined') {
     optimoveSDK.API.setUserId(public_customer_ID);
   }
