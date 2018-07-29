@@ -33,7 +33,7 @@ During the Web SDK onboarding, if you have been using any previous Optimove scri
 
 ### 3. <a id="add-code"> </a> Add the Optimove Web SDK script to your website
 
-The following code snippet must be added to every page in your website, either by adding it into the relevant site template files/code or using a website tag manager (such as Google Tag Manager [example code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/GTM-CustomHTML-Code-Snippet.html)). This code will load and initialize the SDK.
+The following code snippet must be added to every page in your website, either by adding it into the relevant site template files/code or using a website tag manager (such as [Google Tag Manager example code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/GTM-CustomHTML-Code-Snippet.html)). This code will load and initialize the SDK.
 ```javascript
  <script src="https://sdk-cdn.optimove.net/websdk/sdk-vSDKVersion.js"></script>
     <script type="text/javascript">
@@ -145,7 +145,7 @@ optimoveSDK.API.registerUser(SDK_ID, email)
 // example variables
 var SDK_ID = 'JohnDoe';
 var emailAddress = 'johndoe@gmail.com';
-var eventName = 'Registration';
+var eventName = 'sign-up';
 var parameters = {
       Newsletter_Signup : true,
       Landing_Page : 'some/landing/page.html'
@@ -194,4 +194,4 @@ addToWishList('my wish list 1', 123456, 'product name', 1.99);
 ### 2. <a id="server-side-events"></a>How to Report an Custom Event using server-side programming
 
 At this time, events reported in this way will only be used by the Optimove realtime functionality. 
-[Click here](https://github.com/optimoveproductintegration/Reporting-Server-Side-Custom-Events) to see how to report custom events using server side programming.
+[Click here](https://github.com/optimove-tech/Reporting-Server-Side-Custom-Events) to see how to report custom events using server side programming.
