@@ -1,266 +1,197 @@
 
  - [Basic Setup](#basic-setup) 
- - [Advanced Setup](#advanced-setup)
- - [Track](#track) 
-	 - [Linking Website Visitors to Registered Customer IDs ](#link-visit-customer) 
+	 - [Request a Web SDK from Optimove ](#request-sdk) 
+	 - [Remove legacy code (if any) ](#remove-legacy-code) 
+	 - [Add Web SDK script to your website / tag manager](#add-code) 
+	 - [Stitching Website Visitors to Registered Customer IDs ](#link-visit-customer) 
 	- [Tracking Page Visits](#track-visits) 
-	- [Recording/Updating User Email Addresses](#record-email) 
+	- [Reporting/Updating User Email Addresses](#record-email) 
 	- [Registering the User ID and User Email at the Same Time](#record-user-email) 
-	- [Reporting Custom Events](#custom-events) 
+ - [Advanced Setup](#advanced-setup)
+ 	- [Reporting Custom Events](#custom-events) 
 	- [How to Report an Custom Event using server-side programming](https://github.com/optimoveproductintegration/Reporting-Server-Side-Custom-Events) 
- - [Trigger](#trigger)
-	- [Executing Webpage Pop-ups](#trigger-popup) 
-	- [Executing via Optimail](#trigger-optimail) 
-	- [Executing via Optimove APIs](#trigger-api) 
-
-Marketers use the Optimove Relationship Marketing Hub to automate the execution of highly-personalized customer communications. Optimove offers its clients an efficient way to report data from their websites and trigger campaigns accordingly.
-This guide will show you how to setup the Web SDK (using JavaScript) in order to:
-* Tracking visitor and customer actions and events in realtime
-* Triggering realtime personalized campaigns (such as activity-triggered website pop-ups)
-* Enable Cookie matching with the Google Display Network
-The Web SDK is supported for both desktop and mobile web browsers.
 
 ----------
 
 # <a id="basic-setup"></a>Basic Setup
 You can also watch our [webinar](https://academy.optimove.com/customer-retention/webinar-optimove-web-sdk-basic-setup) for more information on how to integrate the basic setup.
- 
-Use the Basic Setup (required) in order to:
-* Tracking your website’s out-of-the-box events in realtime
-* Triggering realtime personalized campaigns (such as activity-triggered website pop-ups)
-* Cookie matching with the Google Display Network
 
-**1. Request a Web SDK from Optimove**
+Use the basic setup of the Web SDK in order to:
 
-Please contact your Optimove Customer Success Manager (CSM) or Optimove point of contact to request your Tenant and Web SDK configuration details in order incorporate into your code. Optimove’s Integration Team will then send you your SDK details which include the Out-Of-The-Box (OOTB) events in order to get started.
+-   Implement [Track & Trigger](https://docs.optimove.com/track-and-trigger/)
+-   Implement [Google Display Network](https://github.com/optimove-tech/GDN) execution channel
 
-**2. Remove any legacy tracking scripts from the website**
+### 1. <a id="request-sdk"> </a> Request a Web SDK from Optimove
+
+Contact your Customer Success Manager (CSM) or Optimove point of contact to request your Web SDK configuration details in order to get started.
+
+### 2. <a id="remove-legacy-code"> </a> Remove any legacy tracking scripts from the website
 
 During the Web SDK onboarding, if you have been using any previous Optimove scripts (Optitrack/Realtime) for the purposes of tracking events or performing Google cookie matching, please remove them, as the Web SDK and legacy code cannot run simultaneously. If you are uncertain which version you have implemented, please contact Optimove Product Integration team.
+>**Note:** 
+> You should continue sending events in production to the legacy Optimove tracking script while implementing this SDK on your staging/testing environment.
 
-**Note**: You should continue sending events in production to legacy Optimove tracking script while implementing this SDK on your staging/testing environment.
+### 3. <a id="add-code"> </a> Add the Optimove Web SDK script to your website
 
-**3. Add the Optimove Web SDK script to your website**
-
-The following code snippet must be added to every page in your website, either by adding it into the relevant site template files/code or using a website tag manager (such as Google Tag Manager). This code will load and initialize the SDK.
-
-    <script src="https://sdk-cdn.optimove.net/websdk/sdk-vSDKVersion.js"></script>
+The following code snippet must be added to every page in your website, either by adding it into the relevant site template files/code or using a website tag manager (such as Google Tag Manager [example code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/GTM-CustomHTML-Code-Snippet.html)). This code will load and initialize the SDK.
+```javascript
+ <script src="https://sdk-cdn.optimove.net/websdk/sdk-vSDKVersion.js"></script>
     <script type="text/javascript">
        optimoveSDK.initialize("TenantToken", "ConfigVersion", function(){
           // events may be called here
        }, "info");
-    </script>
+ </script>
+```
+>**Note:** 
+> Remember to replace **TenantToken**, **ConfigVersion** and **SDKVersion** with the actual details that you receive from Optimove’s Integration Team.
 
-Remember to replace TenantToken, ConfigVersion and SDKVersion with the actual details that you receive from Optimove’s Integration Team.
+### 4. <a id="link-visit-customer"></a>Stitching Website Visitors to Registered Customer IDs
 
-**4. Reporting Visitor and Customer activity**
+In order for all event reporting and realtime functions to be properly associated with the correct individual customer, the **setUserId**(SDK_ID) function must be called whenever a customer initially registers (or, alternatively, the [registerUser](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-user-email)() function) or logs into the website. 
 
-You will also need to include the following steps below to complete the basic setup:
-* Linking Website Visitors to Registered Customer IDs
-* Tracking Page Visits
-* Recording/Updating User Email Addresses
+Example usage:
+```javascript
+// The SDK_ID refers to the unique/primary customer ID used by your website to identify registered customers/users. 
+var SDK_ID = '123456';
+
+// Only call the setUserID() if registered / identified customers **is not** empty, null, unidentified. 
+If(SDK_ID != 'undefined') {
+	optimoveSDK.API.setUserId(SDK_ID);
+}
+```
+>**Note:** 
+> - The **SDK_ID** must match your Customer ID (CID) your are sending Optimove on a daily basis  and is is also used to identify individual customer records within your Optimove customer database.
+> - For  extra security purposes, you can also send the SDK_ID encrypted. Please follow the steps in “[Reporting encrypted CustomerIDs](https://github.com/optimove-tech/Reporting-Encrypted-CustomerID)".
+
+### 5. <a id="track-visits"></a>Tracking Page Visits
+
+In order to track page visits, call the setPageVisit() function on every page of the website to ensure that accurate user counts and session time metrics are collected. 
+```javascript
+// PageURL: The page URL (string, required)
+// PageTitle: The page title (string, required)
+// PageTitle: The page title (string, required)
+optimoveSDK.API.setPageVisit(PageURL, PageTitle, PageCategory);
+```
+
+Example usage:
+```javascript
+// general shared function to captures page visits
+function updateSDKPageVisit (PageURL, PageTitle, PageCategory) {
+	// SDK function
+	optimoveSDK.API.setPageVisit(PageURL, PageTitle, PageCategory);
+}
+
+// variables indicating the page info
+var PageURL = 'https://www.myshop.com/clothes/unisex/shirts?item=123456';
+var PageTitle = 'Some Shirt Name';
+var PageCategory = 'Clothes Unisex Shirts';
+
+// calling the shared function with the relavant variables
+updateSDKPageVisit (PageURL, PageTitle, PageCategory);
+```
+>**Note:** 
+> - Every page view is recorded, including repeated visits to the same page.
+
+
+### 6. <a id="record-email"></a>Reporting / Updating User Email Addresses
+
+Whenever the website captures a user’s/visitor’s email address, such as when a visitor submits a register or subscribe form, call the **setUserEmail()** function to record the address.
+
+```javascript
+// email: user’s email address (string, required)
+optimoveSDK.API.setUserEmail(email);
+```
+Example usage:
+```javascript
+// general shared function to captures email address from various forms
+function updateSDKUserEmail(email){
+	// Optimove function
+	optimoveSDK.API.setUserEmail(email);
+}
+
+// example email variable
+var email = 'joe@gmail.com';
+
+// calling the shared function with the relavant variable
+updateSDKUserEmail (email);
+```
+### 7. <a id="record-user-email"></a>Registering the User ID and User Email at the Same Time
+
+In all situations where a single user action requires you to set both the customer ID and email address (e.g., registration, newsletter signup) simultaneously, you should use the **registerUser()** function (instead of calling both [setUserId()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#link-visit-customer) and [setUserEmail()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-email)) to ensure the proper registration of the user in Optimove.
+
+```javascript
+// SDK_ID: the unique/primary customer ID used by your website to identify registered customers/users. 
+// email: user’s email address (string, required)
+// eventName: name of the event during which the SDK_ID and email address were captured (string, optional)
+// parameters: an array of details for the specified event name (integer/string ,optional)
+optimoveSDK.API.registerUser(SDK_ID, email, eventName, parameters);
+```
+>**Note:** 
+> - Event names will be pre-registered in Optimove by your CSM. 
+> - You can include optional custom eventName and parameters values in this function call which equivalent to calling the [reportEvent()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#custom-events) function.
+
+**Example usage 1:** SDK_ID and email address without events:
+```javascript
+// example variables
+var SDK_ID = 'JohnDoe';
+var email = 'johndoe@gmail.com';
+
+// passing the variables to the SDK function
+optimoveSDK.API.registerUser(SDK_ID, email)
+```
+
+**Example usage 2:** SDK_ID and email address with custom events:
+```javascript
+// example variables
+var SDK_ID = 'JohnDoe';
+var emailAddress = 'johndoe@gmail.com';
+var eventName = 'Registration';
+var parameters = {
+      Newsletter_Signup : true,
+      Landing_Page : 'some/landing/page.html'
+}
+
+// passing the variables to the SDK function
+optimoveSDK.API.registerUser(SDK_ID , email, eventName, parameters);
+```
+
 
 # <a id="advanced-setup"></a>Advanced Setup
 
-Use the Advanced Setup (optional) in order to:
+The **Advanced Setup** includes everything in the [Basic Setup](https://github.com/optimove-tech/Web-SDK-Integration-Guide#basic-setup) as well as reporting custom events. 
 
-1. Tracking visitor and customer customized actions and events in realtime
+Following your Basic Setup SDK deployment, Optimove's Product Integration Manager will setup a call to help you create and implement the custom events.
 
-2. Triggering realtime personalized campaigns (such as activity-triggered website pop-ups)
+>**Note:** 
+> The Basic Setup is a pre-requisite to the Advanced one.
 
-3. Cookie matching with the Google Display Network
+### 1. <a id="custom-events"></a>Reporting Custom Events
 
-As described in Reporting Custom Events, this step requires collaboration between you and Optimove’s Integration Team. Please contact your Optimove Customer Success Manager (CSM) or Optimove point of contact to schedule a meeting with the Product Integration team.
+Your website reports a predefined event to Optimove by using JavaScript to call **reportEvent()** in this format:
+```javascript
+optimoveSDK.API.reportEvent(<event_name>, <parameter JS object>);
+```
 
-**Note**: You can deploy the basic setup, followed by adding the advanced setup at a later stage. The Basic Setup is a pre-requisite.
+>**Note:**
+> To see examples of custom events, please visit [Defining the Set of Custom Tracking Events](https://github.com/optimove-tech/SDK-Custom-Events-for-Your-Vertical) .
 
+Eample usage:
+```javascript
+// an function for adding a product to a specific wish list
+function addToWishList(list_name, pid, pname, price) {
+   var params = {};
+	   params['list_name'] = list_name;
+	   params['pid'] = pid;
+	   params['name'] = pname;
+	   params['price'] = price;
+   optimoveSDK.API.reportEvent ('Add_To_Wishlist', params);
+}
 
-----------
+// calling the add to wish list function with the relavant data
+addToWishList('my wish list 1', 123456, 'product name', 1.99);
+```
 
+### 2. <a id="server-side-events"></a>How to Report an Custom Event using server-side programming
 
-# <a id="track"></a>Track
-### <a id="link-visit-customer"></a>Linking Website Visitors to Registered Customer IDs
-
-In order for all event reporting and realtime functions to be properly associated with the correct individual customer, the setUserId function must be called:
-
-(a) whenever a customer initially registers (or, alternatively, the registerUser function), and also 
-
-(b) on every page visit for which the visitor is identified as a known customer (either after logging in or after being 
-identified by a persistent site cookie).
-
-**Note**: Only call this event if registered / identified customers is not empty, null, unidentified. 
-
-Sample usage:
-
-    var public_customer_ID = '123456';
-    If(public_customer_ID != 'undefined') {optimoveSDK.API.setUserId(public_customer_ID);}
-
-This function (or, alternatively, the registerUser function) must also be called to effect Google cookie matching when using Optimove with the [Google Display Network](https://github.com/optimove-tech/GDN).
-
-**Notes**:
-* The Public Customer ID above refers to the unique customer ID used by your website to identify registered customers/users and which are used to identify individual customer records within your Optimove customer database.
-* If you will be sending encrypted customerID, please follow the steps in “Reporting encrypted CustomerIDs
-* In instances where you need to set both the visitor's user ID and email address simultaneously, you should use the registerUser function instead of setUserId. This applies to all situations in which a single user action requires you to set both the user ID and email address (e.g., registration, newsletter signup).
-
-### <a id="track-visits"></a>Tracking Page Visits
-You must implement the following OOTB function call on every page of the website to ensure that accurate user counts and session time metrics are collected. 
-
-    optimoveSDK.API.setPageVisit(PageURL, PageTitle, PageCategory);
-
-where:
-* **PageURL**: The page URL (string, required)
-* **PageTitle**: The page title (string, optional)
-* **PageCategory**: The page category (string, optional). 
-The page category parameter must always use the exact same text (for example, "Sports-Basketball" should always be specified as "Sports-Basketball" and without using variations, such as "Sport-Basketball" or "Basketball").
-
-Sample usage:
-
-    function updateSDKPageVisit (PageURL, PageTitle, PageCategory) {
-        optimoveSDK.API.setPageVisit(PageURL, PageTitle, PageCategory);
-    }
-    var PageURL = 'https://www.example.com/shop/sport/tennis? user=824734214';
-    var PageTitle = 'Tennis - Main Page';
-    var PageCategory = 'Sport-Tennis';
-    updateSDKPageVisit (PageURL, PageTitle, PageCategory);
-
-**Notes**: 
-* Every page view is recorded, including repeated visits to the same page.
-* setPageVisit function is optional only if you are using the Google Display Network as a stand-alone add-on (without tracking website events). 
-
-### <a id="record-email"></a>Recording/Updating User Email Addresses
-Whenever the website captures a user’s email address, such as when a visitor submits a register or subscribe form, call the setUserEmail function to record the address.
-This is best used when you want to capture realtime email event.
-
-    optimoveSDK.API.setUserEmail(email);
-
-where email is the website user’s email address (string, required).
-Sample usage:
-
-    function updateSDKUserEmail(email){
-       optimoveSDK.API.setUserEmail(email);
-    }
-    var email = 'joe@gmail.com';
-    updateSDKUserEmail (email);
-
-**Note**: 
-* In instances where you need to set both the visitor's user ID and email address simultaneously, you should use the registerUser function instead of setUserEmail. This applies to all situations in which a single user action requires you to set both the user ID and email address (e.g., registration, newsletter signup).
-* When using setUserEmail(email), no need to also send a custom event for register.
-
-###  <a id="record-user-email"></a>Registering the User ID and User Email at the Same Time
-
-In all situations where a single user action requires you to set both the customer ID and email address (e.g., registration, newsletter signup) simultaneously, you should use the registerUser function (instead of calling both setUserId and setUserEmail) to ensure the proper registration of the user in Optimove.
-
-    optimoveSDK.API.registerUser(userId, email, eventName, parameters);
-
-where:
-* **userId**: The user's Customer ID (Integer/String, required)
-* **email** The user's email address (string, required)
-* **eventName**: Name of the event* during which the userID and email address were captured (string, optional)
-* *	Event names will be pre-registered in Optimove by your CSM. Note that including the optional eventName and parameters values in this function call is equivalent to omitting them here and then calling the reportEvent function.
-* **parameters**: An array of details for the specified event name (Integer/String ,optional)
-
-Sample usage 1 - customer ID and email address only:
-
-    var userId = 'JohnDoe';
-    var email = 'johndoe@gmail.com';
-    optimoveSDK.API.registerUser(userId, email)
-
-`
-Sample usage 2 - including event:
-
-    var userId = 'JohnDoe';
-    var emailAddress = 'johndoe@gmail.com';
-    var eventName = 'Registration';
-    var parameters = {
-          Newsletter_Signup : true,
-          Landing_Page : 'some/landing/page.html'
-    }
-    optimoveSDK.API.registerUser(userId, email, eventName, parameters);
-
-### <a id="custom-events"></a>Reporting Custom Events
-Optimove clients may use the Optimove Web SDK to track specific customer actions and other custom events to Optimove (beyond events such as page visits and email addresses). This data is used for tracking visitor and customer behavior, targeting campaigns to specific visitor and/or customer segments and triggering realtime campaigns based on particular visitor and/or customer actions/events.<br/><br/>
-To see examples of Custom Events, please visit [Defining the Set of Custom Tracking Events](https://github.com/optimove-tech/SDK-Custom-Events-for-Your-Vertical) that You Will Report for more information.<br/><br/>
-
-### How to Report an Custom Event from Within a Webpage
-Your website reports a predefined event to Optimove by using JavaScript to call reportEvent in this format:
-
-    optimoveSDK.API.reportEvent(<event_name>, <parameter JS object>);
-
-For example, a gaming site’s Report Win event might be reported using code like this:
-
-    function ReportWinEvent(ID, game, balance, winAmount) {
-       var params = {};
-       params['GameID'] = ID;
-       params['Game'] = game;
-       params['Balance'] = balance;
-       params['Win_Amount'] = winAmount;
-       optimoveSDK.API.reportEvent ('Win', params);
-    }
-    ReportWinEvent ('2134123', '777Slots', 450.50, 200.00);
-
-### <a id="server-side-events"></a>How to Report an Custom Event using server-side programming
 At this time, events reported in this way will only be used by the Optimove realtime functionality. 
 [Click here](https://github.com/optimoveproductintegration/Reporting-Server-Side-Custom-Events) to see how to report custom events using server side programming.
-
-----------
-
-
-# <a id="trigger"></a>Trigger
-
-## <a id="trigger-popup"></a>Executing Webpage Pop-ups
-The Optimove Web SDK provides a website popup functionality, which can be used to show a marketing message to a website user when triggered by conditions defined by the marketer within client’s Optimove site. 
-
-When triggered, the HTML template selected by the marketer when creating the campaign will be sent to end-customer/user and Optimove’s embedded code will display the popup. If you prefer, you can override this functionality in order to serve the popup yourself, using the reportEventCallback option (see below).
-
-### How to enable the Webpage Pop-ups
- 1. Contact your CSM or Optimove point of contact to enable this
-    feature.
- 2. **Option 1**: By default, Optimove will automatically handle the execution of displaying popups without additional code implementation on your side.
- 3. **Option 2**: If you want to customize some popup settings, or replace the code that displays the popup with your own code, you can
-    do this 
-    	 3a. Implement the `setRealTimeOptions()` function (see [Webpage Pop-ups function](#pp-function) below) once per page lifecycle, with the relevant options as described below. This must be called immediately after initiating the SDK
- 4. Once enabled, log into your Optimove site to create the relevant templates and execute pop-ups. 
-
-### <a id="pp-function"></a>Webpage Pop-ups function
-
-    var options = {
-    	    showDimmer : true,
-    	    showWatermark : true,
-    	    reportEventCallback : function(response){
-    		    //insert here your own code to show the popup if necessary
-    	    }
-    }
-    optimoveSDK.API.setRealTimeOptions(options);
-
-**Notes:**
-* **showDimmer**: Dims the rest of the page around the popup box (type is Boolean; default is True)
-* **showWatermark**: Shows the Optimove watermark under the popup (type is Boolean; default is True)
-* **reportEventCallback**: Provides a own callback function that will be called if Optimove determines that a popup should be displayed. You use this option to override the Optimove popup in order to display your own, using your own code. In this event, the response argument will appear as: 
-
-       {
-          "IsSuccess": true,
-          "Data": false  // when no realtime campaign was triggered
-        }
-
-   or
-
-	    {
-	      "IsSuccess": true,
-	      "Data": <HTML template>  // when a campaign was triggered
-	    }
-	    
-## <a id="trigger-optimail"></a>Executing via Optimail
-Ability to execute campaigns using Optimove’s Optimail email service provider (ESP) add-on product. With Optimail you will be able to:
-* Send HTML email campaigns
-* Set personalized tags (first name, last name, and more)
-* These Tags are retrieved from both your daily data transfer, as well as the SDK events you are tracking.
-* Preview campaign email before sending
-* Send realtime marketing campaigns based on your website SDK activity triggering rules
-
-For more information on how to add Optimail to your account, please contact your CSM or your Optimove point of contact.
-
-## <a id="trigger-api"></a>Executing via Optimove APIs
-You can also trigger Optimove realtime campaigns using Optimove’s APIs:
-* Register listener to receive realtime campaign notifications, please refer to RegisterEventListener (where eventid = 11)
-* To view your realtime API payload, please refer to [Optimove Realtime Execution Channels](https://docs.optimove.com/optimove-realtime-execution-channels/) (see Method 3: Realtime API) 
-For more information on how to acquire an API key to use Optimove APIs, please request one from your CSM or your Optimove point of contact.
