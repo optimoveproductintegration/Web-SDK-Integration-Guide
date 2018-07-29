@@ -9,7 +9,7 @@
 	- [Registering the User ID and User Email at the Same Time](#record-user-email) 
  - [Advanced Setup](#advanced-setup)
  	- [Reporting Custom Events](#custom-events) 
-	- [How to Report an Custom Event using server-side programming](https://github.com/optimoveproductintegration/Reporting-Server-Side-Custom-Events) 
+	- [How to Report an Custom Event using server-side programming](#server-side-events) 
 
 ----------
 
