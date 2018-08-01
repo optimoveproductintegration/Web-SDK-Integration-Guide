@@ -175,8 +175,6 @@ Your website reports a predefined event to Optimove by using JavaScript to call 
 optimoveSDK.API.reportEvent(<event_name>, <parameter JS object>);
 ```
 
->**Note:**
-> To see examples of custom events, please visit [Defining the Set of Custom Tracking Events](https://github.com/optimove-tech/SDK-Custom-Events-for-Your-Vertical) .
 
 Eample usage:
 ```javascript
@@ -193,6 +191,16 @@ function addToWishList(list_name, pid, pname, price) {
 // calling the add to wish list function with the relavant data
 addToWishList('my wish list 1', 123456, 'product name', 1.99);
 ```
+>**Note:**
+>  - Event and parameter names are case sensitive.
+>  - Events and parameters use snake_case as a naming convention. Separate each word with one underscore character (_) and no spaces. (e.g., Checkout_Completed)
+>  - The parameter types available for use in event-reporting functions are:
+> **String**  – A series of alphanumeric characters of up to 255 characters in length, using any encoding
+> **Number**  – Any numeric value, whether an integer or a value containing a decimal point
+>  **Boolean**  – A string equal to either "true" or "false"
+>  - All monetary values must be reported in the same currency defined in your Optimove instance (e.g., if your instance is based on US dollars, all monetary event values must be reported in dollars). Optimove will not perform currency conversions.
+>  - If your Optimove instance supports multiple languages, all event parameters must use a single default language. This is required in order to maintain a unified set of events.
+> - To see examples of custom events, please visit [Defining the Set of Custom Tracking Events](https://github.com/optimove-tech/SDK-Custom-Events-for-Your-Vertical) .
 
 ### 2. <a id="server-side-events"></a>How to Report an Custom Event using server-side programming
 
