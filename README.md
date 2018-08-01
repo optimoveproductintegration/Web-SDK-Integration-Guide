@@ -1,4 +1,5 @@
 
+
  - [Basic Setup](#basic-setup) 
 	 - [Request a Web SDK from Optimove ](#request-sdk) 
 	 - [Remove legacy code (if any) ](#remove-legacy-code) 
@@ -55,12 +56,14 @@ Example usage:
 var SDK_ID = '123456';
 
 // Only call the setUserID() if registered / identified customers **is not** empty, null, unidentified. 
+// SDK_ID: (string, required)
 If(SDK_ID != 'undefined') {
 	optimoveSDK.API.setUserId(SDK_ID);
 }
 ```
 >**Note:** 
 > - The **SDK_ID** must match your Customer ID (CID) your are sending Optimove on a daily basis  and is is also used to identify individual customer records within your Optimove customer database.
+> - The **SDK_ID** is a required variable and must be a "string" format.
 > - For  extra security purposes, you can also send the SDK_ID encrypted. Please follow the steps in “[Reporting encrypted CustomerIDs](https://github.com/optimove-tech/Reporting-Encrypted-CustomerID)".
 
 ### 5. <a id="track-visits"></a>Tracking Page Visits
@@ -120,7 +123,7 @@ updateSDKUserEmail (email);
 In all situations where a single user action requires you to set both the customer ID and email address (e.g., registration, newsletter signup) simultaneously, you should use the **registerUser()** function (instead of calling both [setUserId()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#link-visit-customer) and [setUserEmail()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-email)) to ensure the proper registration of the user in Optimove.
 
 ```javascript
-// SDK_ID: the unique/primary customer ID used by your website to identify registered customers/users. 
+// SDK_ID: the unique/primary customer ID used by your website to identify registered customers/users - (string, required)
 // email: user’s email address (string, required)
 // eventName: name of the event during which the SDK_ID and email address were captured (string, optional)
 // parameters: an array of details for the specified event name (integer/string ,optional)
