@@ -6,7 +6,7 @@
     -   [Enabling Webpage Pop-Ups using Optimove Web SDK](#enabling)
     - [Webpage Pop-Up: Option 1 (Default)](#option1)
     - [Webpage Pop-Up: Option 2 (Callback)](#option2)
-    - [Webpage Pop-ups Functions and Options](#webpage-pop-ups-function)
+    - [Webpage Pop-ups Callback Functions and Options](#webpage-pop-ups-function)
 -   **[Creating Webpage Pop-up campaign in Optimove Site](#create-popup-in-site)**
     -   [Create a Pop-up template](#templates)
     - [Create Realtime Triggers](#triggers)
@@ -33,12 +33,18 @@ When triggered, the HTML template selected by the marketer when creating the cam
 ### <a id="option1"></a>Webpage Pop-Up: Option 1 (Default)
 By creating a webpage pop-up campaign in your Optimove site (see [Creating Webpage Pop-up campaign in Optimove Site](#create-popup-in-site)), this will automatically allow you to execute and display the relevant pop-up. [Optimove Web SDK](https://github.com/optimove-tech/Web-SDK-Integration-Guide) already consists of this functionality and there is no additional code implementation required.
 
-There is however specific metadata (dimmer and watermark) that can be modified for your Optimove's webpage pop-up (see [Webpage Pop-ups Functions and Options](#webpage-pop-ups-function)) that is done by Optimove's Product Integration Manager. Please ask the Product Integration Manager to update the metadata as required.
+There is however specific metadata (dimmer and watermark) that can be modified for your Optimove's webpage pop-up (see [Webpage Pop-ups Functions and Options](#webpage-pop-ups-function)).
+
+>**Note:** 
+> - The Web Pop-Up created via Manage Templates, does support form submission (text fields, drop downs, etc) into Optimove. Please see Form Submission.
+> - To enable/disable dimmer or watermark, please contact the Product Integration Team.
+> 
 <br/>
+
 ### <a id="option2"></a>Webpage Pop-Up: Option 2 (Callback)
-If you prefer, you can override Optimove's webpage pop-up functionality in order to serve the popup yourself. This means, by calling the  `reportEventCallback` function (see [Webpage Pop-ups Functions and Options](#webpage-pop-ups-function)), you will be able to retrieve the marketer's message/HTML coming from Optimove campaign and display it in your website according to your own popup/banner functionality.
+If you prefer, you can override Optimove's webpage pop-up functionality in order to serve the popup yourself. This means, by calling the  `reportEventCallback` function (see [Webpage Pop-ups Callback Functions and Options](#webpage-pop-ups-function)), you will be able to retrieve the marketer's message/HTML coming from Optimove campaign and display it in your website according to your own popup/banner functionality.
 <br/>
-### <a id="webpage-pop-ups-function"></a>Webpage Pop-ups Functions and Options
+### <a id="webpage-pop-ups-function"></a>Webpage Pop-ups Callback Functions and Options
 
 **Options & Function code snippet**
 ```javascript
@@ -89,23 +95,66 @@ OR
  1.  Go to Manage Templates in your Optimove site
  2. Choose Web Pop-Up
  3. Create a pop-up page
- 4. Import your popup HTML file
+ 4. Either create template or import your an HTML file
 
-- 4a. **HTML:** No need to insert `<html>, <head>, <body> ` tags as this is inherited from your parent website. Only insert the HTML tags that will be within the `<body>` tag, such as `<div>, <img>, <table>` and more.
+- 4a. **HTML:**
 	
 ```javascript
+//No need to insert `<html>, <head>, <body> ` tags as this is inherited from your parent website. 
+//Only insert the HTML tags that will be within the `<body>` tag, such as `<div>, <img>, <table>` and more.
 <div markdown="1" id="div-id">
     Lorem ipsum dolor sit amet.
 </div>
 ```
-- 4b. **CSS**: You can style the html tags by using in-line css, such as:
+- 4b. **CSS**:
 
 ```javascript
+//You can style the html tags by using in-line css
 <div markdown="1" id="div-id" style="background-color:white;height:300px;width:300px">
     Lorem ipsum dolor sit amet.
 </div>
 ```
-	
+- 4c. **Form Submission**:
+
+```javascript
+//You can send a form data as a custom event by adding form html tags
+<div markdown="1" id="div-id" style="background-color:white;height:300px;width:300px">
+    Lorem ipsum dolor sit amet.
+    <div><label>first name</label> <input type="text" id="fname" /></div>
+    <div><label>last name</label> <input type="text" id="lname" /></div>
+    <div><label>email</label> <input type="text" id="email" /></div>
+    <button type="button" id="btn" >Register</button>
+</div>
+
+//Please note that only one script tag is supported and it must be after the HTML
+<script>
+   initPopup = function(){
+        let btn = document.getElementById("btn");
+            
+        btn.onclick = function(event){
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+            let email = document.getElementById("email").value;
+            
+            //If you want to automatically close the pop-up, please use this SDK  function
+            self.optimoveSDK.API.closeRealtimePopup(true);
+            
+            //The is Optimove SDK function registerUser() sends both the SDK_ID and one custom event
+            self.optimoveSDK.API.registerUser(SDK_ID, email, "our_newsletter_event", { "fname" : fname, "lname" : lname})
+            
+            //Only used if closeRealtimePopup(false) is set to false
+            //Present the form message by changing the value of the DIV
+            my_response_message = "Thank you for joining our newsletter";
+            document.getElementById("div-id").innerHTML = my_response_message;
+        }
+    }();
+</script>
+```
+>**Note:** 
+> - The [registerUser()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-user-email) can only be called once within the pop-up with one event
+> - In the example above, the "our_newsletter_event" event is a custom event which can then be accessible when creating a relevant Target Group in order to create & trigger campaigns
+> - Form submission response message should be included in the script tag
+
 8.   Preview the added HTML
 9. Save
 
