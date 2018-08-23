@@ -68,7 +68,7 @@ The below code should be used in Optimove Manage Templates
 ```javascript
 //You can style the html tags by using in-line css
 //The in-line css below effects inside the pop-up only
-//he outter part of the pop-up (size and position) is pre-set by Optimove and does currently does not support adjustments
+//he outter part of the pop-up (position) is pre-set by Optimove and does currently does not support adjustments
 <div id="div-id" style="background-color:white;height:300px;width:300px">
     Lorem ipsum dolor sit amet.
 </div>
