@@ -94,9 +94,9 @@ The below code should be used in Optimove Manage Templates
             let lname = document.getElementById("lname").value;
             let email = document.getElementById("email").value;
             
-            //Optional: If you want the pop-up to close automatically upon form submission, use closeRealtimePopup(true) function
+            //Optional: If you want the pop-up to close automatically upon form submission, use closeRealtimePopup(true) function, otherwise do not add this function
             self.optimoveSDK.API.closeRealtimePopup(true);
-            //Optional: If you want to show a message after the form submission and allow the user to close the pop-up by clicking the (x), use the following example:
+            //Optional: If you want to show a message after the form submission and allow the user to close the pop-up by clicking the (x) instead of  closeRealtimePopup(true), use the following example:
             my_response_message = "Thank you for joining our newsletter";
             document.getElementById("div-id").innerHTML = my_response_message;
             
