@@ -40,7 +40,7 @@ When triggered, the HTML template selected by the marketer when creating the cam
 By creating a webpage pop-up campaign in your Optimove site (see [Webpage Pop-up code examples in Optimove Site](#create-popup-in-site) and [Execute campaign via Webpage Pop-up](https://docs.optimove.com/track-and-trigger/#Webpage)), this will automatically allow you to execute and display the relevant pop-up. 
 [Optimove Web SDK](https://github.com/optimove-tech/Web-SDK-Integration-Guide) already consists of this functionality and there is no additional code implementation required.
 
-There is however specific metadata (dimmer and watermark) that can be modified for your Optimove's webpage pop-up (see [Webpage Pop-ups Functions and Options](#webpage-pop-ups-function)).
+There is however specific metadata (dimmer and watermark) that can be modified for your Optimove's webpage pop-up.
 
 >**Note:** 
 > - The Web Pop-Up created via Manage Templates, does support form submission (text fields, drop downs, etc) into Optimove. Please see Form Submission.
@@ -117,7 +117,7 @@ The below code should be used in Optimove Manage Templates
 <br/>
 
 ## <a id="option2"></a>Webpage Pop-Up: Option 2 (Callback)
-If you prefer, you can override Optimove's (Option 1: Default) webpage pop-up functionality in order to serve the popup yourself. This means, you will be able to retrieve the marketer's message/HTML coming from Optimove campaign and display it in your website according to your own popup/banner functionality (see [Webpage Pop-ups Callback Functions and Options](#webpage-pop-ups-function)).
+If you prefer, you can override Optimove's (Option 1: Default) webpage pop-up functionality in order to serve the popup yourself. This means, you will be able to retrieve the marketer's message/HTML coming from Optimove campaign and display it in your website according to your own popup/banner functionality (see [setRealTimeOptions() Definitions](#rt-def)).
 <br/>
 
 <a id="rt-code-snippet"></a>**setRealTimeOptions() code snippet:**
@@ -154,7 +154,7 @@ function openAPopUp(optimovePopupData){
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|--------------------|
 | showDimmer          | Dims the rest of the page around the popup box                                                                                                                                                                                                                            | Boolean  | True               |
 | showWatermark       | Shows the Optimove watermark under the popup                                                                                                                                                                                                                             | Boolean  | True               |
-| reportEventCallback | Use this option to override the Optimove webpage pop-up in order to display your own code. In this event, the response argument will appear as:  | Function | [response arguments](#response-arg) (optional: your code) |
+| reportEventCallback | Use this option to override the Optimove webpage pop-up in order to display your own code. In this event, the response argument will appear as:  | Function | [setRealTimeOptions() Response Arguments](#rt-arg) (optional: your code) |
 <br/>
 
 **<a id="rt-arg"></a>setRealTimeOptions() Response Arguments**
@@ -172,3 +172,5 @@ OR
 }
 ```
 <hr>
+
+
