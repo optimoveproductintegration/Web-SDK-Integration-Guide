@@ -73,7 +73,7 @@ In order to track page visits, call the setPageVisit() function on every page of
 ```javascript
 // PageURL: The page URL (string, required)
 // PageTitle: The page title (string, required)
-// PageTitle: The page title (string, required)
+// PageCategory: The page category (string, required)
 optimoveSDK.API.setPageVisit(PageURL, PageTitle, PageCategory);
 ```
 
