@@ -7,8 +7,8 @@
 	 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Webpage%20Pop-ups/images/t1.png?raw=true"><br/>The above is an example only</p> 
  4. Click on “Add Event” and choose the desired custom event, including relevant values.
 >**Notes:**
->  - Events will only be shown if Optimove's Product Integration Team configured them for you. If you do not see an event that was already configured, please contact the Optimove's Product Integration Team
->  - The parameter values are case sensitive, so they must be formatted exactly as they are being sent to the Optimove SDK
+>  - Events will only be shown if Optimove's Product Integration Team configured them for you. If you do not see an event that was already configured, please contact Optimove's Product Integration Team
+>  - The parameter values are case sensitive, therefore they must be formatted exactly as they are being sent to the Optimove SDK
 >  - If you do not add/choose a value for a specific parameter, it will automatically check for “any” value
 >  	
 5.	Review your trigger and click on “Save”
