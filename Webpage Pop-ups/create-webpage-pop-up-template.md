@@ -1,18 +1,18 @@
 ### How to create a Webpage Pop-up template:
 
-1.	In your Optimove site, go to Manage Templates section
+1.	In your Optimove UI, go to the "Manage Templates" section
 2.	Under “CHANNEL” choose “Webpage Pop-up”
  <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Webpage%20Pop-ups/images/f1.png?raw=true"></p> 
 
-3.	If you don’t already have a folder, create one by clicking on “Add Folder”
+3.	Create a folder by clicking on “Add Folder”
 4.	Within your chosen folder, add a “New Template”
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Webpage%20Pop-ups/images/f2.png?raw=true"><br/>The above is an example only</p>
  
-5.	By default, the template opens in WYISWYG view. If you want to add your own HTML/CSS/JavaScript code into the template, you will need to do the following:
+5.	By default, the template opens in WYSIWYG view. If you want to add your own HTML/CSS/JavaScript code into the template, you will need to do the following:
 	a.	Switch to “source” view instead.
 	<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Webpage%20Pop-ups/images/f3.png?raw=true"><br/>The above is an example only</p>
  
-	b.	Since our webpage pop-up comes with default HTML code, remove everything withing the <bod></body> table and replace it with your code instead.
+	b.	Since our webpage pop-up comes with default HTML code, remove everything within the <bod></body> tags and replace it with your code instead.
 	```html
 	<!DOCTYPE html>
 	<html>
@@ -30,8 +30,8 @@
  
 	d.	In order to preview this template, you can click on “Preview”.
 	>**Notes:**
-	>  - Preview will only work if the you HTML, CSS and JavaScript code is located within the template itself. 
-	>  - If your using your website’s CSS located on your website itself, you will not be able to use the “Preview”, as your CSS styles are located on your front-end website and not within the Optimove site. In this case, in order to view your template, you will need to [execute a realtime Webpage Pop-up campaign](https://docs.optimove.com/track-and-trigger/#Webpage). 
+	>  - Preview will only work if the HTML, CSS and JavaScript code is located within the template itself 
+	>  - When using your front-end website’s CSS located on your front-end website itself, you will not be able to use the “Preview”, as your CSS styles are located on your front-end website and not within the Optimove site. In this case, in order to view your template, you will need to [execute a realtime Webpage Pop-up campaign](https://docs.optimove.com/track-and-trigger/#Webpage). 
 	>  	
 
 
