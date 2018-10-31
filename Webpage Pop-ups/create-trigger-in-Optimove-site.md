@@ -1,5 +1,5 @@
 
-### How to create a trigger realtime campaigns:
+### How to create a trigger for a realtime campaigns:
 
  1. In your Optimove UI, go to the "Manage Triggers" section
  2. Create a category by clicking on “New Category”
