@@ -15,7 +15,7 @@
 
 ### Additional Reads
 
- - How to create a Webpage Pop-up template
+ - [How to create a Webpage Pop-up template](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Webpage%20Pop-ups/create-webpage-pop-up-template.md)
  - [How to execute a Webpage Pop-up realtime campaign](https://docs.optimove.com/track-and-trigger/#Webpage)
  - [Enabling Webpage Pop-up](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Webpage%20Pop-ups)
 
