@@ -8,7 +8,7 @@
 4.	Within your chosen folder, add a “New Template”
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Webpage%20Pop-ups/images/f2.png?raw=true"><br/>The above is an example only</p>
  
-5.	By default, the template opens in WYSIWYG view. If you want to add your own HTML/CSS/JavaScript code into the template, you will need to do the following:
+5.	By default, the template opens in WYSIWYG view. If you want to add your own HTML/CSS/JavaScript code into the template, you will need to do the following:<br/>
 	a.	Switch to “source” view instead.
 	<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Webpage%20Pop-ups/images/f3.png?raw=true"><br/>The above is an example only</p>
  
