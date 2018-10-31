@@ -1,4 +1,4 @@
-How to create a trigger based on your tracked custom events in order to execute a realtime campaign:
+### How to create a trigger based on your tracked custom events in order to execute a realtime campaign:
 
  1. In your Optimove site, go to Manage Triggers section
  2. If you don’t already have a category, create one by clicking on “New Category”
@@ -13,8 +13,10 @@ How to create a trigger based on your tracked custom events in order to execute 
 5.	Review your trigger and click on “Save”
 <p align="center"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Webpage%20Pop-ups/images/t2.png?raw=true"></p> 
 
-Additional reads:
+### Additional Reads
 
  - How to create a Webpage Pop-up template
  - [How to execute a Webpage Pop-up realtime campaign](https://docs.optimove.com/track-and-trigger/#Webpage)
  - [Enabling Webpage Pop-up](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Webpage%20Pop-ups)
+
+ 
