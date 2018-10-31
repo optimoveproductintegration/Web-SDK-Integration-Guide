@@ -11,7 +11,7 @@
 >  - If you do not add/choose a value for a specific parameter, it will automatically check for “any” values
 >  	
 5.	Review your trigger and click on “Save”
-<p align="center"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Webpage%20Pop-ups/images/t2.png?raw=true"></p> 
+<p align="center"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Webpage%20Pop-ups/images/t2.png?raw=true" style="max-width:70%;"></p> 
 
 ### Additional Reads
 
