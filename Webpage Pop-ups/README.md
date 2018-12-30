@@ -8,15 +8,17 @@
     - [What is Webpage Pop-Up Wrapper option (Served by Optimove)](#opt1)
     - [What is Webpage Pop-Up Callback option (Served by the client)](#opt2)
 -   **[Integrating the Wrapper option ](#option1)**
-    -   [Pop-up content code format & best practice](#create-popup-in-site)
+    -   Pop-up content code format & best practice
 	    -  [HTML ](#html-script)
 	    -  [External Fonts](#ex-fonts)
 	    -  [CSS ](#css-script)
 	    -  [JavaScript](#js-script)
 	    -  [Newsletters and Form Capture](#form-submission-script)
-	-   [Code snippets ](#option1)
+	-   Code snippets
 		-   [Promotional popup](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Webpage%20Pop-ups/wapper-promotional-popup.html)
 		-   [Newsletter / form capture popup](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Webpage%20Pop-ups/wapper-newseltter-popup.html)
+	-   Testing your Pop-up
+		-   [Optimove Pop-up Preview Tool ](#chrome-extension) (Chrome Extension)
 -   **[Integrating the Callback option ](#option2)**
     -  [setRealTimeOptions() code snippet](#rt-code-snippet)
     -  [setRealTimeOptions() Definition](#rt-def)
@@ -182,6 +184,12 @@ initPopup = function()
          } 
 </script>
 ```
+<br/>
+
+## <a id="chrome-extension"></a>Testing your Pop-up
+
+During your pop-up development and QA, you may want to preview the pop-up's code (HTML, CSS and JavaScript). You can do so by installing [Optimove's Pop-up Preview Tool](https://chrome.google.com/webstore/detail/optimove-pop-up-preview-t/hkmibimnfjlpdllheganlbiinhlehago) in your Chrome browser. 
+
 <br/>
 
 ## <a id="option2"></a>Integrating the Callback option
