@@ -43,8 +43,7 @@ FLOW GOES HERE
 
 ## <a id="advanced-flow"></a>ADVANCED (custom events) setup technical flow
 
-FLOW GOES HERE
-
+<p align="center"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/raw/master/Web%20SDK%20Tech%20Flows/web-sdk-tech-flow-basic.jpg?raw=true"></p>
 
 ### Use Case(s) Review
 > - Prerequisite: Web SDK Basic Setup running in production
