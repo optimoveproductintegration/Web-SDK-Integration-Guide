@@ -18,9 +18,9 @@ Below you will find the Web SDK technical flows to help you technically understa
 
 ### Implementation
 > - Client adds the following SDK details to their website or tag manager (e.g. GTM):
-	> -- [SDK code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Web-SDK-Code-Snippets/GTM-CustomHTML-Code-Snippet.html) – copy / paste into your website/tag manager
-		> -- Includes: SDK initialization code
-		> -- Includes: SDK basic functions ([setPageVisit()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#track-visits), [setUserId()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#link-visit-customer) and/or [registerUser()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-user-email))
+	> - [SDK code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Web-SDK-Code-Snippets/GTM-CustomHTML-Code-Snippet.html) – copy / paste into your website/tag manager
+		> - Includes: SDK initialization code
+		> - Includes: SDK basic functions ([setPageVisit()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#track-visits), [setUserId()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#link-visit-customer) and/or [registerUser()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-user-email))
 > - Client points the webconfig to the SDK staging environment `yourconfigname.1.0.x-stg`
 > - Client provides Optimove Product Integration team with staging/testing environment web URL where the SDK was implemented in
 
