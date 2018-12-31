@@ -3,6 +3,7 @@ Below you will find the Web SDK technical flows to help you technically understa
 - [BASIC setup technical flow](#basic-flow) 
 - [ADVANCED setup technical flow](#advanced-flow) 
 
+<br/>
 
 ## <a id="basic-flow"></a>BASIC setup technical flow
 
