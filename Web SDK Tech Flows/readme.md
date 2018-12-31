@@ -49,13 +49,11 @@ FLOW GOES HERE
 ### Use Case(s) Review
 > - Prerequisite: Web SDK Basic Setup running in production
 > - Optimove Product Integration team will set a kick-off call with the client's Marketing/CRM/Product team and present supported use cases
-> -- see [eCommerce sample use cases](https://docs.optimove.com/track-and-trigger-use-cases/)
-> -- Gaming sample uses cases will be added soon - please inquire with Product Integration team 
+	> - see [eCommerce sample use cases](https://docs.optimove.com/track-and-trigger-use-cases/)
+	> - Gaming sample uses cases will be added soon - please inquire with Product Integration team 
 > - Client will require to review and confirm/approve use cases
 > - After confirming use cases, the client will need to prioritize which use cases they want to get started with from 1 to x (where x is the last use case)
->  -- This will pave the integration flow for the next steps in this setup
-
-<br/>
+	>  - This will pave the integration flow for the next steps in this setup
 
 ### Event(s) Configuration
 > - Optimove Product Integration team configures the new use case event(s) according to client's priority
@@ -63,16 +61,12 @@ FLOW GOES HERE
 > - Optimove Product Integration team sends new webconfig version to client
 > -- **Note**: Each new/modified use case(s), you will require to update the webconfig. We incrementally increase the version of the webconfig in order to support backward compatibility
 
-<br/>
-
 ### Implementation
 > - Client adds the following SDK event(s) to their website or tag manager (e.g. GTM) using the following SDK functions:
 > -- [reportEvent()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#custom-events) and/or [registerUser()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-user-email)
 > -- see [eCommerce use case code snippets](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/eComm-Use-Cases-Code-Snippets)
 > - Client points the webconfig to the SDK staging environment `yourconfigname.1.0.x-stg`
 > - Client provides Optimove Product Integration team with staging/testing environment web URL where the event(s) was implemented in
-
-<br/>
 
 ### Testing
 > - Optimove Product Integration teams will test event(s) data is flowing into Optimove tracking database (e.g. items_in_cart, page_loaded, deposit_success, and more)
