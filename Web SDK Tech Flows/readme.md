@@ -76,7 +76,7 @@ Below you will find the Web SDK technical flows to help you technically understa
 3. Optimove signs-off implementation and contact client to publish / deploy tag
 
 
-### Deployment
+### Event(s) Deployment
 1. Client points the SDK webconfig by changing the webconfig version from “yourconfigname.1.0.x-stg” to `yourconfigname.1.0.x`, by **removing** the `-stg` so that the code points to your Optimove production environment
 2. Client publishes the SDK code / tag into production and notifies Optimove Product Integration team
 3. Optimove Product Integration team will confirm the event(s) data is flowing into production tracking database in order to start using the event(s) in Optimove UI to create relevant campaigns
