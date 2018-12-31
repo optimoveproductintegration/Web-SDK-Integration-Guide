@@ -1,1 +1,1 @@
-Open any of the Web SDK code snippets
+Open any of the Web SDK code snippets in this repo folder
