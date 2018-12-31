@@ -9,6 +9,9 @@ Below you will find the Web SDK technical flows to help you technically understa
 
 <p align="center"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/raw/master/Web%20SDK%20Tech%20Flows/web-sdk-tech-flow-basic.jpg?raw=true"></p>
 
+> **Definition**: O = Optimove, C = Client
+
+<br/>
 
 ### SDK Configuration
 1. Optimove Product Integration team creates the SDK token and web configuration (aka, webconfig) file
@@ -41,6 +44,9 @@ Below you will find the Web SDK technical flows to help you technically understa
 
 FLOW GOES HERE
 
+> **Definition**: O = Optimove, C = Client
+
+<br/>
 
 ### Use Case(s) Review
 1.  Prerequisite: Web SDK Basic Setup running in production
