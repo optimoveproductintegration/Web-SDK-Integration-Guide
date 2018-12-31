@@ -50,7 +50,7 @@ FLOW GOES HERE
 ### Use Case(s) Review
 > - Prerequisite: Web SDK Basic Setup running in production
 > - Optimove Product Integration team will set a kick-off call with the client's Marketing/CRM/Product team and present supported use cases
-> -- see [eCommerce sample use cases](https://docs.optimove.com/track-and-trigger-use-cases/)
+> -- xx see [eCommerce sample use cases](https://docs.optimove.com/track-and-trigger-use-cases/)
 > -- Gaming sample uses cases will be added soon - please inquire with Product Integration team 
 > - Client will require to review and confirm/approve use cases
 > - After confirming use cases, the client will need to prioritize which use cases they want to get started with from 1 to x (where x is the last use case)
