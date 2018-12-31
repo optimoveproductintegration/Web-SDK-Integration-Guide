@@ -18,9 +18,9 @@ Below you will find the Web SDK technical flows to help you technically understa
 
 ### Implementation
 > - Client adds the following SDK details to their website or tag manager (e.g. GTM):
-	> - [SDK code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Web-SDK-Code-Snippets/GTM-CustomHTML-Code-Snippet.html) – copy / paste into your website/tag manager
-		> - Includes: SDK initialization code
-		> - Includes: SDK basic functions ([setPageVisit()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#track-visits), [setUserId()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#link-visit-customer) and/or [registerUser()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-user-email))
+> -- xx [SDK code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Web-SDK-Code-Snippets/GTM-CustomHTML-Code-Snippet.html) – copy / paste into your website/tag manager
+> -- Includes: SDK initialization code
+> -- Includes: SDK basic functions ([setPageVisit()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#track-visits), [setUserId()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#link-visit-customer) and/or [registerUser()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-user-email))
 > - Client points the webconfig to the SDK staging environment `yourconfigname.1.0.x-stg`
 > - Client provides Optimove Product Integration team with staging/testing environment web URL where the SDK was implemented in
 
@@ -50,7 +50,7 @@ FLOW GOES HERE
 ### Use Case(s) Review
 > - Prerequisite: Web SDK Basic Setup running in production
 > - Optimove Product Integration team will set a kick-off call with the client's Marketing/CRM/Product team and present supported use cases
-> -- xx see [eCommerce sample use cases](https://docs.optimove.com/track-and-trigger-use-cases/)
+> -- see [eCommerce sample use cases](https://docs.optimove.com/track-and-trigger-use-cases/)
 > -- Gaming sample uses cases will be added soon - please inquire with Product Integration team 
 > - Client will require to review and confirm/approve use cases
 > - After confirming use cases, the client will need to prioritize which use cases they want to get started with from 1 to x (where x is the last use case)
