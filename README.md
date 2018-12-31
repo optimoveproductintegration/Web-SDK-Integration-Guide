@@ -1,8 +1,8 @@
 
 
+
  - [Basic Setup](#basic-setup) 
 	 - [Request a Web SDK from Optimove ](#request-sdk) 
-	 - [Remove legacy code (if any) ](#remove-legacy-code) 
 	 - [Add Web SDK script to your website / tag manager](#add-code) 
 	 - [Stitching Website Visitors to Registered Customer IDs ](#link-visit-customer) 
 	- [Tracking Page Visits](#track-visits) 
@@ -22,17 +22,11 @@ Use the basic setup of the Web SDK in order to:
 -   Implement [Track & Trigger](https://docs.optimove.com/track-and-trigger/)
 -   Implement [Google Display Network](https://github.com/optimove-tech/GDN) execution channel
 
-### 1. <a id="request-sdk"> </a> Request a Web SDK from Optimove
+### <a id="request-sdk"> </a> Request a Web SDK from Optimove
 
 Contact your Customer Success Manager (CSM) or Optimove point of contact to request your Web SDK configuration details in order to get started.
 
-### 2. <a id="remove-legacy-code"> </a> Remove any legacy tracking scripts from the website
-
-During the Web SDK onboarding, if you have been using any previous Optimove scripts (Optitrack/Realtime) for the purposes of tracking events or performing Google cookie matching, please remove them, as the Web SDK and legacy code cannot run simultaneously. If you are uncertain which version you have implemented, please contact Optimove Product Integration team.
->**Note:** 
-> You should continue sending events in production to the legacy Optimove tracking script while implementing this SDK on your staging/testing environment.
-
-### 3. <a id="add-code"> </a> Add the Optimove Web SDK script to your website
+### <a id="add-code"> </a> Add the Optimove Web SDK script to your website
 
 The following code snippet must be added to every page in your website, either by adding it into the relevant site template files/code or using a website tag manager (such as [Google Tag Manager example code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/GTM-CustomHTML-Code-Snippet.html)). This code will load and initialize the SDK.
 ```javascript
@@ -46,7 +40,7 @@ The following code snippet must be added to every page in your website, either b
 >**Note:** 
 > Remember to replace **TenantToken**, **ConfigVersion** and **SDKVersion** with the actual details that you receive from Optimove’s Integration Team.
 
-### 4. <a id="link-visit-customer"></a>Stitching Website Visitors to Registered Customer IDs
+### <a id="link-visit-customer"></a>Stitching Website Visitors to Registered Customer IDs
 
 In order for all event reporting and realtime functions to be properly associated with the correct individual customer, the **setUserId**(SDK_ID) function must be called whenever a customer initially registers (or, alternatively, the [registerUser](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-user-email)() function) or logs into the website. 
 
@@ -67,7 +61,7 @@ If(SDK_ID != 'undefined') {
 > - The **SDK_ID** is a required variable and must be a "string" format.
 > - For  extra security purposes, you can also send the SDK_ID encrypted. Please follow the steps in “[Reporting encrypted CustomerIDs](https://github.com/optimove-tech/Reporting-Encrypted-CustomerID)".
 
-### 5. <a id="track-visits"></a>Tracking Page Visits
+### <a id="track-visits"></a>Tracking Page Visits
 
 In order to track page visits, call the setPageVisit() function on every page of the website to ensure that accurate user counts and session time metrics are collected. 
 ```javascript
@@ -97,7 +91,7 @@ updateSDKPageVisit (PageURL, PageTitle, PageCategory);
 > - Every page view is recorded, including repeated visits to the same page.
 
 
-### 6. <a id="record-email"></a>Reporting / Updating User Email Addresses
+### <a id="record-email"></a>Reporting / Updating User Email Addresses
 
 Whenever the website captures a user’s/visitor’s email address, such as when a visitor submits a register or subscribe form, call the **setUserEmail()** function to record the address.
 
@@ -119,7 +113,7 @@ var email = 'joe@gmail.com';
 // calling the shared function with the relavant variable
 updateSDKUserEmail (email);
 ```
-### 7. <a id="record-user-email"></a>Registering the User ID and User Email at the Same Time
+### <a id="record-user-email"></a>Registering the User ID and User Email at the Same Time
 
 In all situations where a single user action requires you to set both the customer ID and email address (e.g., registration, newsletter signup) simultaneously, you should use the **registerUser()** function (instead of calling both [setUserId()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#link-visit-customer) and [setUserEmail()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-email)) to ensure the proper registration of the user in Optimove.
 
@@ -169,7 +163,7 @@ Following your Basic Setup SDK deployment, Optimove's Product Integration Manage
 >**Note:** 
 > The Basic Setup is a pre-requisite to the Advanced one.
 
-### 1. <a id="custom-events"></a>Reporting Custom Events
+### <a id="custom-events"></a>Reporting Custom Events
 
 Your website reports a predefined event to Optimove by using JavaScript to call **reportEvent()** in this format:
 ```javascript
@@ -203,7 +197,7 @@ addToWishList('my wish list 1', 123456, 'product name', 1.99);
 >  - If your Optimove instance supports multiple languages, all event parameters must use a single default language. This is required in order to maintain a unified set of events.
 > - To see examples of custom events, please visit [Defining the Set of Custom Tracking Events](https://github.com/optimove-tech/SDK-Custom-Events-for-Your-Vertical) .
 
-### 2. <a id="server-side-events"></a>How to Report an Custom Event using server-side programming
+### <a id="server-side-events"></a>How to Report an Custom Event using server-side programming
 
 At this time, events reported in this way will only be used by the Optimove realtime functionality. 
 [Click here](https://github.com/optimove-tech/Reporting-Server-Side-Custom-Events) to see how to report custom events using server side programming.
