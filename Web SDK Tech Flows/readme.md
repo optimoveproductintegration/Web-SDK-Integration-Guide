@@ -42,7 +42,7 @@ Below you will find the Web SDK technical flows to help you technically understa
 
 ## <a id="advanced-flow"></a>ADVANCED (custom events) setup technical flow
 
-FLOW GOES HERE
+<p align="center"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/raw/master/Web%20SDK%20Tech%20Flows/web-sdk-tech-flow-advanced.jpg?raw=true"></p>
 
 > **Definition**: O = Optimove, C = Client
 
