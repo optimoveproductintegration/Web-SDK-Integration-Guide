@@ -1,12 +1,12 @@
 Below you will find the Web SDK technical flows to help you technically understand the integration steps within the setup in order to assist you in your project/dev planning.
 
-[BASIC setup technical flow](#basic-flow) 
-[ADVANCED setup technical flow](#advanced-flow) 
+- [BASIC setup technical flow](#basic-flow) 
+- [ADVANCED setup technical flow](#advanced-flow) 
 
 
 ## <a id="basic-flow"></a>BASIC setup technical flow
 
-FLOW GOES HERE
+<p align="center"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/raw/master/Web%20SDK%20Tech%20Flows/web-sdk-tech-flow-basic.jpg?raw=true"></p>
 
 
 ### SDK Configuration
@@ -43,7 +43,8 @@ FLOW GOES HERE
 
 ## <a id="advanced-flow"></a>ADVANCED (custom events) setup technical flow
 
-<p align="center"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/raw/master/Web%20SDK%20Tech%20Flows/web-sdk-tech-flow-basic.jpg?raw=true"></p>
+FLOW GOES HERE
+
 
 ### Use Case(s) Review
 > - Prerequisite: Web SDK Basic Setup running in production
