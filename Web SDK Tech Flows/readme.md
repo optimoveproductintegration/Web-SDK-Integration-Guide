@@ -11,8 +11,8 @@ Below you will find the Web SDK technical flows to help you technically understa
 
 
 ### SDK Configuration
-> - Optimove Product Integration team creates the SDK token and web configuration (aka, webconfig) file
-> - Optimove Product Integration team sends SDK details to client
+1. Optimove Product Integration team creates the SDK token and web configuration (aka, webconfig) file
+2. Optimove Product Integration team sends SDK details to client
 
 
 ### Implementation
@@ -69,7 +69,6 @@ FLOW GOES HERE
 2. Should any of these tests fail, it will require the client to update the code accordingly
 3. Optimove signs-off implementation and contact client to publish / deploy tag
 
-<br/>
 
 ### Deployment
 1. Client points the SDK webconfig by changing the webconfig version from “yourconfigname.1.0.x-stg” to `yourconfigname.1.0.x`, by **removing** the `-stg` so that the code points to your Optimove production environment
