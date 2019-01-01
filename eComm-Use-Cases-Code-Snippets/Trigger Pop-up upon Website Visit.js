@@ -21,3 +21,4 @@ self.optimoveSDK.API.reportEvent({{Event}}, {"page_url": {{page_url}}, "page_tit
     * Event Name: page_loaded
  */
 optimoveSDK.API.reportEvent('page_loaded', {"page_url": ""+document.location.href+"", "page_title": ""+document.title+"", "page_category": "depends on your wesite structure"});
+
