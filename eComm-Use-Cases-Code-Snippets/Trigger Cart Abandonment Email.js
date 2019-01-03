@@ -28,13 +28,13 @@ for (i = 1; i < yourCartItemsArray.length; i++) {
 itemsObject['items_total_price'] = items_total_price;
 
 //push the json object "itemsObject" into the reportEvent()
-self.optimoveSDK.API.reportEvent('items_in_cart', {items: itemsObject});
+optimoveSDK.API.reportEvent('items_in_cart', {items: itemsObject});
 
 
  /**********************************cart_is_empty************************ */
 
 //Trigger: When a website user's cart is empty, send cart_is_empty event to Optimove notifing Optimove that the site is empty which will stop the cart abandonment timer
-self.optimoveSDK.API.reportEvent('cart_is_empty', {});
+optimoveSDK.API.reportEvent('cart_is_empty', {});
 
 
  /**********************************placed_order************************ */
@@ -43,6 +43,6 @@ self.optimoveSDK.API.reportEvent('cart_is_empty', {});
 //Note: This is the same concenpt/flow as in items_cart_above
 
 //push the json object "itemsObject" into the reportEvent()
-self.optimoveSDK.API.reportEvent('placed_order', {items: itemsObject});
+optimoveSDK.API.reportEvent('placed_order', {items: itemsObject});
 
 /************************************************************************
