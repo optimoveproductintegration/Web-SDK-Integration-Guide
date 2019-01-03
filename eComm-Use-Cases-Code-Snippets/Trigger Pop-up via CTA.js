@@ -14,7 +14,7 @@
     * GTM Trigger: Custom Event
     * GTM Built-In Variables  required: event_name
  */
-self.optimoveSDK.API.reportEvent({{event_name}}, {});
+self.optimoveSDK.API.reportEvent('click_to_open_newsletter_popup', {});
 
 /************************************************************************ */
 
