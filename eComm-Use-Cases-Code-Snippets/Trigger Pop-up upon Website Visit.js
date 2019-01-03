@@ -15,7 +15,7 @@
     * GTM Built-In Variables  required: event_name
     * GTM User-Defined Variables required: page_url, page_title, page_category
  */
-self.optimoveSDK.API.reportEvent({{event_name}}, {"page_url": {{page_url}}, "page_title": {{page_title}}, "page_category": {{page_category}}});
+self.optimoveSDK.API.reportEvent('page_loaded', {"page_url": {{page_url}}, "page_title": {{page_title}}, "page_category": {{page_category}}});
 
 /************************************************************************ */
 
