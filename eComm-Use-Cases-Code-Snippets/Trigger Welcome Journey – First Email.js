@@ -22,7 +22,6 @@ optimoveSDK.API.registerUser(SDK_ID, email, "newsletter_registration", {
       first_name: first_name,
       last_name: last_name,
       email: email,
-      SDK_ID: SDK_ID,
       opt_in: opt_in
    });
                
