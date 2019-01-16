@@ -1,6 +1,3 @@
-
-
-
  - [Basic Setup](#basic-setup) 
 	 - [Request a Web SDK from Optimove ](#request-sdk) 
 	 - [Add Web SDK script to your website / tag manager](#add-code) 
