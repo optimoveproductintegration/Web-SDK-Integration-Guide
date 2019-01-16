@@ -16,7 +16,7 @@
 
   - [Technical Web SDK Integration Flows](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Webpage%20Pop-ups)
 
- - [Web SDK Code Snippets](#)
+ - Web SDK Code Snippets
  	- [General Code Snippets](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web-SDK-Code-Snippets) 
  	- [eCommerce Use Cases](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/eComm-Use-Cases-Code-Snippets) 
 ----------
