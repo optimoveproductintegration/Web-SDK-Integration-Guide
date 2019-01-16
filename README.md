@@ -19,8 +19,6 @@
 ----------
 
 ## <a id="basic-setup"></a>Basic Setup
-You can also watch our [webinar](https://academy.optimove.com/customer-retention/webinar-optimove-web-sdk-basic-setup) for more information on how to integrate the basic setup.
-
 Use the basic setup of the Web SDK in order to:
 
 -   Implement [Track & Trigger](https://docs.optimove.com/track-and-trigger/)
