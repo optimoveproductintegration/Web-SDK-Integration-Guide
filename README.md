@@ -1,21 +1,21 @@
 # Web SDK Setup Guide
- - [Basic Setup](#basic-setup) 
+ - **Basic Setup**
+	 - [Intro](#basic-setup) 
 	 - [Request a Web SDK from Optimove ](#request-sdk) 
 	 - [Add Web SDK script to your website / tag manager](#add-code) 
 	 - [Stitching Website Visitors to Registered Customer IDs ](#link-visit-customer) 
 	- [Tracking Page Visits](#track-visits) 
 	- [Reporting/Updating User Email Addresses](#record-email) 
 	- [Registering the User ID and User Email at the Same Time](#record-user-email) 
- - [Advanced Setup](#advanced-setup)
+  - **Advanced Setup**
+	 - [Intro](#advanced-setup)
  	- [Reporting Custom Events](#custom-events) 
 
- - [Optimove Webpage Pop-Up Tech Guide](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web%20SDK%20Tech%20Flows)
-
-  - [Technical Web SDK Integration Flows](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Webpage%20Pop-ups)
-
- - Web SDK Code Snippets
- 	- [General Code Snippets](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web-SDK-Code-Snippets) 
- 	- [eCommerce Use Cases](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/eComm-Use-Cases-Code-Snippets) 
+  - **Addtional Userful Info**
+	 - [Optimove Webpage Pop-Up Tech Guide](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web%20SDK%20Tech%20Flows)
+	- [Technical Web SDK Integration Flows](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Webpage%20Pop-ups)
+ 	- [General SDK Code Snippets](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web-SDK-Code-Snippets) 
+ 	- [eCommerce Use Cases Code Snippets](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/eComm-Use-Cases-Code-Snippets) 
 ----------
 
 ## <a id="basic-setup"></a>Basic Setup
