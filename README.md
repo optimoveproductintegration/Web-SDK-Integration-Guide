@@ -34,16 +34,14 @@ Contact your Customer Success Manager (CSM) or Optimove point of contact to requ
 
 ### <a id="add-code"> </a> Add the Optimove Web SDK script to your website
 
-The following code snippet must be added to every page in your website, either by adding it into the relevant site template files/code or using a website tag manager (such as [Google Tag Manager example code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/GTM-CustomHTML-Code-Snippet.html)). This code will load and initialize the SDK.
+The following code snippet must be added to every page in your website, either by adding it into the relevant site template files/code or using a website tag manager (such as [Google Tag Manager example code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Web-SDK-Code-Snippets/GTM-CustomHTML-Code-Snippet.html)). This code will load and initialize the SDK.
 ```javascript
- <script src="https://sdk-cdn.optimove.net/websdk/sdk-vSDKVersion.js"></script>
-    <script type="text/javascript">
-       optimoveSDK.initialize("TenantToken", "ConfigVersion", function(){
-          // events may be called here
-       }, "info");
- </script>
+ optimoveSDK.initialize("TenantToken", "ConfigVersion", function(){
+    // events may be called here
+ }, "info");
 ```
 >**Note:** 
+> Please note the above is ONLY an example. [Click here for full code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Web-SDK-Code-Snippets/GTM-CustomHTML-Code-Snippet.html).
 > Remember to replace **TenantToken**, **ConfigVersion** and **SDKVersion** with the actual details that you receive from Optimove’s Integration Team.
 
 ### <a id="link-visit-customer"></a>Stitching Website Visitors to Registered Customer IDs
