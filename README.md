@@ -10,7 +10,6 @@
 	- [Registering the User ID and User Email at the Same Time](#record-user-email) 
  - [Advanced Setup](#advanced-setup)
  	- [Reporting Custom Events](#custom-events) 
-	- [How to Report an Custom Event using server-side programming](#server-side-events) 
 
  - [Optimove Webpage Pop-Up Tech Guide](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web%20SDK%20Tech%20Flows)
 
