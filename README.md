@@ -11,7 +11,14 @@
  - [Advanced Setup](#advanced-setup)
  	- [Reporting Custom Events](#custom-events) 
 	- [How to Report an Custom Event using server-side programming](#server-side-events) 
-
+<br/>
+ - [Optimove Webpage Pop-Up Tech Guide](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web%20SDK%20Tech%20Flows)
+<br/>
+  - [Technical Web SDK Integration Flows](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Webpage%20Pop-ups)
+<br/>
+ - [Web SDK Code Snippets](#)
+ 	- [General Code Snippets](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web-SDK-Code-Snippets) 
+ 	- [eCommerce Use Cases](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/eComm-Use-Cases-Code-Snippets) 
 ----------
 
 # <a id="basic-setup"></a>Basic Setup
@@ -195,7 +202,6 @@ addToWishList('my wish list 1', 123456, 'product name', 1.99);
 >  **Boolean**  – A string equal to either "true" or "false"<br/>
 >  - All monetary values must be reported in the same currency defined in your Optimove instance (e.g., if your instance is based on US dollars, all monetary event values must be reported in dollars). Optimove will not perform currency conversions.
 >  - If your Optimove instance supports multiple languages, all event parameters must use a single default language. This is required in order to maintain a unified set of events.
-> - To see examples of custom events, please visit [Defining the Set of Custom Tracking Events](https://github.com/optimove-tech/SDK-Custom-Events-for-Your-Vertical) .
 
 ### <a id="server-side-events"></a>How to Report an Custom Event using server-side programming
 
