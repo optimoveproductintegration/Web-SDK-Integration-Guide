@@ -201,8 +201,4 @@ addToWishList('my wish list 1', 123456, 'product name', 1.99);
 >  **Boolean**  – A string equal to either "true" or "false"<br/>
 >  - All monetary values must be reported in the same currency defined in your Optimove instance (e.g., if your instance is based on US dollars, all monetary event values must be reported in dollars). Optimove will not perform currency conversions.
 >  - If your Optimove instance supports multiple languages, all event parameters must use a single default language. This is required in order to maintain a unified set of events.
-
-### <a id="server-side-events"></a>How to Report an Custom Event using server-side programming
-
-At this time, events reported in this way will only be used by the Optimove realtime functionality. 
-[Click here](https://github.com/optimove-tech/Reporting-Server-Side-Custom-Events) to see how to report custom events using server side programming.
+>  
