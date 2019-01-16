@@ -11,7 +11,7 @@
 	 - [Intro](#advanced-setup)
  	- [Reporting Custom Events](#custom-events) 
 
-  - **Addtional Userful Info**
+  - **Addtional Tech Info**
 	 - [Optimove Webpage Pop-Up Tech Guide](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web%20SDK%20Tech%20Flows)
 	- [Technical Web SDK Integration Flows](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Webpage%20Pop-ups)
  	- [General SDK Code Snippets](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web-SDK-Code-Snippets) 
