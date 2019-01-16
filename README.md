@@ -1,4 +1,4 @@
-## Web SDK Setup Guide
+# Web SDK Setup Guide
  - [Basic Setup](#basic-setup) 
 	 - [Request a Web SDK from Optimove ](#request-sdk) 
 	 - [Add Web SDK script to your website / tag manager](#add-code) 
@@ -18,7 +18,7 @@
  	- [eCommerce Use Cases](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/eComm-Use-Cases-Code-Snippets) 
 ----------
 
-# <a id="basic-setup"></a>Basic Setup
+## <a id="basic-setup"></a>Basic Setup
 You can also watch our [webinar](https://academy.optimove.com/customer-retention/webinar-optimove-web-sdk-basic-setup) for more information on how to integrate the basic setup.
 
 Use the basic setup of the Web SDK in order to:
@@ -156,7 +156,7 @@ optimoveSDK.API.registerUser(SDK_ID , email, eventName, parameters);
 ```
 
 
-# <a id="advanced-setup"></a>Advanced Setup
+## <a id="advanced-setup"></a>Advanced Setup
 
 The **Advanced Setup** includes everything in the [Basic Setup](https://github.com/optimove-tech/Web-SDK-Integration-Guide#basic-setup) as well as reporting custom events. 
 
@@ -194,7 +194,7 @@ addToWishList('my wish list 1', 123456, 'product name', 1.99);
 >  - The parameter types available for use in event-reporting functions are:<br/>
 > **String**  – A series of alphanumeric characters of up to 255 characters in length, using any encoding<br/>
 > **Number**  – Any numeric value, whether an integer or a value containing a decimal point<br/>
->  **Boolean**  – A string equal to either "true" or "false"<br/>
+>  **Boolean**  – Is either "true" or "false" values, not a string<br/>
 >  - All monetary values must be reported in the same currency defined in your Optimove instance (e.g., if your instance is based on US dollars, all monetary event values must be reported in dollars). Optimove will not perform currency conversions.
 >  - If your Optimove instance supports multiple languages, all event parameters must use a single default language. This is required in order to maintain a unified set of events.
 >  
