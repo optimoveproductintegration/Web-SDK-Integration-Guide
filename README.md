@@ -11,11 +11,11 @@
  - [Advanced Setup](#advanced-setup)
  	- [Reporting Custom Events](#custom-events) 
 	- [How to Report an Custom Event using server-side programming](#server-side-events) 
-<br/>
+
  - [Optimove Webpage Pop-Up Tech Guide](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web%20SDK%20Tech%20Flows)
-<br/>
+
   - [Technical Web SDK Integration Flows](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Webpage%20Pop-ups)
-<br/>
+
  - [Web SDK Code Snippets](#)
  	- [General Code Snippets](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web-SDK-Code-Snippets) 
  	- [eCommerce Use Cases](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/eComm-Use-Cases-Code-Snippets) 
