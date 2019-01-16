@@ -1,6 +1,4 @@
-
-
-## Executing Optimove Webpage Pop-ups
+## Webpage Pop-up Tech Guide
 
 -   [Introduction](#intro)
 -   **[Getting Started](#getting-started)**
