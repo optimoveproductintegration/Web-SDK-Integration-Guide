@@ -12,27 +12,34 @@
         <style>
             .optimove-main-div{
                 display: block;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
             }
             .optimove-after-submit{
-                display: block;
+                display: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
             }
         </style>
         <!-- You can add IDs to an HTML element -->
         <!-- You can add either in-style CSS or CSS classes to an HTML element -->
         <div id="optimove-main-div" class="optimove-main-div">
             <div id="optimove-before-submit">
-				<h2>Lorem ipsum dolor sit amet.</h2>
-				<p>Lorem ipsum dolor sit amet.</p>
+				<h2>Your text goe shere</h2>
+				<p>Some other text goes here</p>
 				<div>
                     <!-- You can add form elements -->
-                    <input type="email" id="email">
-					<button type="button" id="btn">Lorem</button>
+                    <form id="#" class="newsletter_form" action="#">
+                        Enter your first name <input type="text" id="first_name"><br/><br/>
+                        Enter your email  <input type="text" id="email_address"><br/><br/>
+                        <input type="checkbox" id="optin"> Click to sign up for our newsletter<br/><br/>
+                        <button type="button" id="submit_form">Lorem</button>
+                    </form>
 				</div>
-				<a href="#" id="close-popup">Lorem ipsum</a>
 			</div>
 			<div class="optimove-after-submit" id="optimove-after-submit">
-                Lorem ipsum dolor sit amet.
-                <a href="#" id="close-popup">Lorem ipsum</a>
+                Thanks you for registering to our newsletter<br/><br/>
+                <a href="#" id="close-popup">Continue in Website</a>
 			</div>
         </div>
         <!--  Important Info
@@ -41,42 +48,44 @@
         - If you prefer using jQuery, please make sure this is added to your website first
         - -->
         <script>	
-			initPopup = function()
-			{
+			//user for integration on-boarding purposes only
+            var initPopupLog = function(msg){
+                if(msg) {console.log(msg);}
+                //return;
+            };
+
+			var initPopup = function(){
+
 				initPopupLog("inside pop-up");
-				let btn = document.getElementById("btn");
-				btn.onclick = function(event)
-				{
-					initPopupLog("popup signup btn clicked");
-					let $email = document.getElementById("email").value;
-					let SDK_ID = email;					
+                document.getElementById("submit_form").onclick = function(){
 					
+                    initPopupLog("popup signup submit_form clicked");
+
+					var email = SDK_ID = document.getElementById("email_address").value;
+                                       
+                    var params = {
+                        first_name : ""+document.getElementById("first_name").value+"",
+                        optin : document.getElementById("optin").checked
+                    };			
+
 					//registerUser() function sends both the SDK_ID and one custom event to Optimove
-					self.optimoveSDK.API.registerUser(SDK_ID, email, "signup",
-					{
-						email: email
-					});
+                    self.optimoveSDK.API.registerUser(""+SDK_ID+"", ""+email+"", "newsletter_registration",params);
                     
                     //Optional: If you want the pop-up to close automatically upon form submission, use closeRealtimePopup(true) function, otherwise do not add this function
-                    self.optimoveSDK.API.closeRealtimePopup(true);
+                    //self.optimoveSDK.API.closeRealtimePopup(true);
                     
                     //Optional: If you want to show a message after the form submission and allow the user to close the pop-up by clicking the (x) instead of  closeRealtimePopup(true), use the following example:
 					document.getElementById("optimove-before-submit").style.display = "none";
 					document.getElementById("optimove-after-submit").style.display = "block";
-				}
-				let closeBtn = document.getElementById('close-popup');
-				closeBtn.onclick = function(event)
-				{
+                    
+				};
+
+                document.getElementById("close-popup").onclick = function(){
 					initPopupLog("closing pop-up");
 					self.optimoveSDK.API.closeRealtimePopup(true);
-				}
+				};
+
             }();
-            //user for integration on-boarding purposes only
-            function initPopupLog (message){
-                console.log(message);
-                //when want to turn this off, just "return" instead
-                //return;
-            } 
 		</script>
     </body>
 </html>
