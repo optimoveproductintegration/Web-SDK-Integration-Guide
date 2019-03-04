@@ -11,17 +11,13 @@
 //Note: The below was created under the assumption that you already have an html input fields in your website.
 //Note: The below only represents the values fetched from the html input elements in your website
 
+var email = SDK_ID = document.getElementById("email").value;
 
-let $first_name = document.getElementById("first_name").value;
-let $last_name = document.getElementById("last_name").value;
-let $email = document.getElementById("email").value;
-let $SDK_ID = email;
-let $opt_in = document.getElementById("opt_in").checked;
+var params = {
+    first_name : ""+document.getElementById("first_name").value+"",
+    last_name : ""+document.getElementById("last_name").value+"",
+    opt_in : document.getElementById("opt_in").checked
+};
 
-optimoveSDK.API.registerUser(SDK_ID, email, "newsletter_registration", {
-      first_name: first_name,
-      last_name: last_name,
-      email: email,
-      opt_in: opt_in
-   });
-               
+//registerUser() function sends both the SDK_ID and one custom event to Optimove
+self.optimoveSDK.API.registerUser(""+SDK_ID+"", ""+email+"", "newsletter_registration",params);
