@@ -4,7 +4,7 @@ In this guide we will discuss the steps necessary to implement the Optimove Web 
 
 1. Initializing the SDK
 1. Tracking page visits for each user
-1. Tracking users
+1. Recognizing users
     1. Setting a user ID for each user
     1. Registering a new user
   
