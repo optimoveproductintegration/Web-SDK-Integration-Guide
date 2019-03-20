@@ -1,6 +1,88 @@
 # Initializing the SDK
 
+In Google Tag Manager, create a new tag and name it "initialize_sdk". The type should be "Custom HTML" and firing trigger should be "All Pages".
+
 ## Step 1
 In Google Tag Manager, create a new tag and name it "initialize_sdk". The type should be "Custom HTML" and firing trigger should be "All Pages".
 
 <p align="left"><img src="https://github.com/DannyMac180/Web-SDK-Integration-Guide/blob/master/Web-SDK-Basic-Code-Setup/images/Screenshot_1.png"></p>
+
+## Step 2
+In the "Custom HTML" field for the "initialize_sdk" tag, input this code, changing the initialization variables to the ones provided to you by Optimove's Product Integration team:
+
+    <script type="text/javascript">
+    // ---------------------------------------
+    //These are your dynamic variables which will be used for the Optimove sdk
+    //optimoveSDKToken = your sdk token provided by the Product Integration team
+    //optimoveSDKVersion = the sdk version provided by the Product Integration team which also changes upon sdk upgrades
+    //optimoveSDKconfigVersion = your event configuration file version provided by the Product Integration team which also changes upon event modifications
+    // ---------------------------------------
+    var optimoveSDKToken = 'your-sdk-token-here'; 
+    var optimoveSDKVersion = 'your-optimove-sdk-version-here'; 
+    var optimoveSDKconfigVersion = 'your-config-version-here'; 
+    
+    // ---------------------------------------
+    // Function: createOptimoveSDK
+    // Args: resourceURL, callback
+    // creates JS script that is async
+    // ---------------------------------------
+    function createOptimoveSDK(resourceURL, callback) {
+      
+      console.log('In createOptimoveSDK() '+resourceURL); 
+    
+      if (resourceURL != null) {
+        var d = document;
+        var g = d.createElement('script');
+        var s = d.getElementsByTagName('script')[0];
+    
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = resourceURL;
+        g.onload = callback;
+    
+        s.parentNode.insertBefore(g, s);
+      }
+    }
+    
+    // ---------------------------------------
+    // Function: initializeOptimoveSDK
+    // Args: --
+    // initializes optimove SDK with sdk details provided to you by Product Integration team
+    // ---------------------------------------
+    function initializeOptimoveSDK() {
+      
+      console.log('In initializeOptimoveSDK()');
+    
+      optimoveSDK.initialize(optimoveSDKToken, optimoveSDKconfigVersion, loadOptimoveSDKFunctions, 'info');
+    }
+    
+    // ---------------------------------------
+    // Function: loadOptimoveSDKFunctions
+    // Args: status
+    // where you call optimove sdk functions, such as setPageVisit()
+    // ---------------------------------------
+    function loadOptimoveSDKFunctions(status) {
+    
+      console.log('In loadOptimoveSDKFunctions()  = ' + status);
+      //var sdkLoadedEvent = new Event('sdkLoaded');
+      //document.dispatchEvent(sdkLoadedEvent);
+      //window.sdkIsLoaded = true;
+      
+        dataLayer.push({
+          'event':"page_visit"
+        });
+      	/* Trigger setUseId event only if the sdk_id cookie is defined*/
+      	var check_coockie={{set_user_id - GetCookie}}('sdk_id')
+      	if (check_coockie!='undefined' && check_coockie!=null){
+          	console.log("Recognized customer");
+        	dataLayer.push({
+          		'event':"set_user_id"
+        	});
+        }
+    }
+    
+    createOptimoveSDK('https://sdk-cdn.optimove.net/websdk/sdk-v'+optimoveSDKVersion+'.js', initializeOptimoveSDK); 
+    </script>
+
+
