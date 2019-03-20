@@ -84,4 +84,4 @@ In the "Custom HTML" field for the "initialize_sdk" tag, input this code, changi
     createOptimoveSDK('https://sdk-cdn.optimove.net/websdk/sdk-v'+optimoveSDKVersion+'.js', initializeOptimoveSDK); 
     </script>
 
-
+This code will cause the Optimove Web SDK to be initialized on every page on your site where you've included your GTM container.
