@@ -12,7 +12,7 @@ In the "Custom HTML" field for the "initialize_sdk" tag, input this code, changi
 
     <script type="text/javascript">
     // ---------------------------------------
-    //These are your dynamic variables which will be used for the Optimove sdk
+    //These are your dynamic variables which will be used for the Optimove sdk. Make sure to replace the placeholder text with the variables provided to you by our Product Integration team.
     //optimoveSDKToken = your sdk token provided by the Product Integration team
     //optimoveSDKVersion = the sdk version provided by the Product Integration team which also changes upon sdk upgrades
     //optimoveSDKconfigVersion = your event configuration file version provided by the Product Integration team which also changes upon event modifications
