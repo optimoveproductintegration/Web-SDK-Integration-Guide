@@ -15,6 +15,7 @@ In the "Custom HTML" field for the "initialize_sdk" tag, input this code, changi
     //optimoveSDKToken = your sdk token provided by the Product Integration team
     //optimoveSDKVersion = the sdk version provided by the Product Integration team which also changes upon sdk upgrades
     //optimoveSDKconfigVersion = your event configuration file version provided by the Product Integration team which also changes upon event modifications
+    
     // ---------------------------------------
     var optimoveSDKToken = 'your-sdk-token-here'; 
     var optimoveSDKVersion = 'your-optimove-sdk-version-here'; 
@@ -24,6 +25,7 @@ In the "Custom HTML" field for the "initialize_sdk" tag, input this code, changi
     // Function: createOptimoveSDK
     // Args: resourceURL, callback
     // creates JS script that is async
+    
     // ---------------------------------------
     function createOptimoveSDK(resourceURL, callback) {
       
@@ -72,8 +74,8 @@ In the "Custom HTML" field for the "initialize_sdk" tag, input this code, changi
           'event':"page_visit"
         });
       	/* Trigger setUseId event only if the sdk_id cookie is defined*/
-      	var check_coockie={{set_user_id - GetCookie}}('sdk_id')
-      	if (check_coockie!='undefined' && check_coockie!=null){
+      	var check_cookie={{set_user_id - GetCookie}}('sdk_id')
+      	if (check_cookie!='undefined' && check_coockie!=null){
           	console.log("Recognized customer");
         	dataLayer.push({
           		'event':"set_user_id"
