@@ -7,7 +7,7 @@ In the same Google Tag Manager account:
 * Set the Event name to "set_user_id" 
 * Set "This trigger fires on" to "All Custom Events".
 
-<p align="left"><img src="https://github.com/DannyMac180/Web-SDK-Integration-Guide/blob/master/Web-SDK-Basic-Code-Setup/images/page_visit_trigger.png"></p>
+<p align="left"><img src="https://github.com/DannyMac180/Web-SDK-Integration-Guide/blob/master/Web-SDK-Basic-Code-Setup/images/set_user_id_trigger.png"></p>
 
 ## Step 2
 In Google Tag Manager: 
