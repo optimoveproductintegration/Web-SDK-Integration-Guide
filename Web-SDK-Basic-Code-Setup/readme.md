@@ -1,6 +1,6 @@
-# Overview of the basic Optimove Web SDK setup
+# Basic Optimove Web SDK Setup Using Google Tag Manager (GTM)
 
-In this guide we will discuss the steps necessary to implement the Optimove Web SDK for your website using Google Tag Manager (GTM). It will go through the four steps necessary to have the basic SDK ready to track events on your website. The events that it covers include:
+In this guide we will discuss the steps necessary to implement the basic Optimove Web SDK for your website using Google Tag Manager (GTM). It will go through the four steps necessary to have the basic SDK ready to track events on your website. The events that it covers include:
 
 1. [Initializing the SDK](https://github.com/DannyMac180/Web-SDK-Integration-Guide/blob/master/Web-SDK-Basic-Code-Setup/2.%20Initializing%20the%20SDK.md)
 1. [Tracking page visits](https://github.com/DannyMac180/Web-SDK-Integration-Guide/blob/master/Web-SDK-Basic-Code-Setup/3.%20Tracking%20page%20visits.md)
