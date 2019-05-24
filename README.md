@@ -93,7 +93,6 @@ createOptimoveSDK('https://sdk-cdn.optimove.net/websdk/sdk-v'+optimoveSDKVersion
 </script>
 ```
 >**Note:** 
-> Please note the above is ONLY an example. [Click here for full code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Web-SDK-Code-Snippets/GTM-CustomHTML-Code-Snippet.html).
 > Remember to replace **optimoveSDKToken**, **optimoveSDKToken** and **optimoveSDKconfigVersion** with the actual details that you receive from Optimove’s Integration Team.
 
 ### <a id="link-visit-customer"></a>Stitching Website Visitors to Registered Customer IDs
