@@ -30,7 +30,7 @@ Contact your Customer Success Manager (CSM) or Optimove point of contact to requ
 
 ### <a id="add-code"> </a> Add the Optimove Web SDK script to your website
 
-The following code snippet must be added to every page in your website, either by adding it into the relevant site template files/code or using a website tag manager (such as [Google Tag Manager example code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Web-SDK-Code-Snippets/GTM-CustomHTML-Code-Snippet.html)). This code will load and initialize the SDK.
+The following code snippet must be added to every page in your website, either by adding it into the relevant site template files/code or using a website tag manager (such as [Google Tag Manager example code snippet](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Web-SDK-Basic-Code-Setup/readme.md)). This code will load and initialize the SDK.
 ```javascript
 <script>
 // ---------------------------------------
