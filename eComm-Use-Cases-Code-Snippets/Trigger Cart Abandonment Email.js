@@ -28,7 +28,7 @@ for (i = 1; i < yourCartItemsArray.length; i++) {
 itemsObject['items_total_price'] = items_total_price;
 
 //push the json object "itemsObject" into the reportEvent()
-optimoveSDK.API.reportEvent('items_in_cart', {items: itemsObject});
+optimoveSDK.API.reportEvent('items_in_cart', itemsObject);
 
 
  /**********************************cart_is_empty************************ */
