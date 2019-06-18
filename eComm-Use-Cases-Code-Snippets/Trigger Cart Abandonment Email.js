@@ -43,6 +43,6 @@ optimoveSDK.API.reportEvent('cart_is_empty', {});
 //Note: This is the same concenpt/flow as in items_cart_above
 
 //push the json object "itemsObject" into the reportEvent()
-optimoveSDK.API.reportEvent('placed_order', {items: itemsObject});
+optimoveSDK.API.reportEvent('placed_order', itemsObject);
 
 /************************************************************************
