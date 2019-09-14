@@ -2,30 +2,23 @@
 The tool was created in order to help your engireeing person(s) see the data that is being set to Optimove within your website
 
 ## Enabling the Test Tool
-<<<<<<< HEAD
 1. Open the Developer Tools in your browser
 2. Go to the Console tab
 3. Type in `optimoveSDK.API.openSideBar();` to display the Optimove SDK Web Test Tool
 4. Once the Test Tool is open, you can close the DevTools
-=======
-1 - Open the Developer Tools in your browser
-2 - Go to the Console tab
-3 - Type in 'optimoveSDK.API.openSideBar();' to display the Optimove SDK Web Test Tool
-4 - Once the Test Tool is open, you can close the DevTools
->>>>>>> 76403230aa508f3b786a84107f71bc2b54d072fd
 TODO: PHOTO 1
 
 ## Reading the Test Tool Events & Parameters
 - Events are only stored for 1 hour upon opening the Test Tool
 - Events are sorted ASC where the first event is at the top and last event is at the bottom
 - Each event will consist of 
--- "Date" in Date + Time format
--- "Event ID" and "Event Name" as was configured by the Optimove Product Integration Team
+- - "Date" in Date + Time format
+- - "Event ID" and "Event Name" as was configured by the Optimove Product Integration Team
 - All events consist of four additional parameters that Optimove captures
--- Event Platform - your device platform (e.g. windows, mac, etc)
--- Event Device Type - your device type (e.g. desktop, mobile, etc)
--- Event OS - your device operating system (e.g. Windows 10, MacBook, Android 10, iOS 13, etc)
--- Event Native Mobile - whether your users visited from a mobile native app or not (e.g. true / false)
+- - Event Platform - your device platform (e.g. windows, mac, etc)
+- - Event Device Type - your device type (e.g. desktop, mobile, etc)
+- - Event OS - your device operating system (e.g. Windows 10, MacBook, Android 10, iOS 13, etc)
+- - Event Native Mobile - whether your users visited from a mobile native app or not (e.g. true / false)
 - You have the option to "Clear Events" at any time
 
 >- (Note*: The Test Tool currently does not display any errors (e.g. events / param missing, incorrect implementation, etc)
