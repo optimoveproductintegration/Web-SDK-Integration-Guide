@@ -2,10 +2,10 @@
 The tool was created in order to help your engireeing person(s) see the data that is being set to Optimove within your website
 
 ## Enabling the Test Tool
-1- Open the Developer Tools in your browser
-2- Go to the Console tab
-3- Type in 'optimoveSDK.API.openSideBar();' to display the Optimove SDK Web Test Tool
-4- Once the Test Tool is open, you can close the DevTools
+1 - Open the Developer Tools in your browser
+2 - Go to the Console tab
+3 - Type in 'optimoveSDK.API.openSideBar();' to display the Optimove SDK Web Test Tool
+4 - Once the Test Tool is open, you can close the DevTools
 TODO: PHOTO 1
 
 ## Reading the Test Tool Events & Parameters
