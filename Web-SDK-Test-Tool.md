@@ -11,10 +11,10 @@ TODO: PHOTO 1
 ## Reading the Test Tool Events & Parameters
 - Events are only stored for 1 hour upon opening the Test Tool
 - Events are sorted ASC where the first event is at the top and last event is at the bottom
-- Each event will consist of 
+- Each row will consist of: 
     - **Date** in Date + Time format
     - **Event ID** and "Event Name" as was configured by the Optimove Product Integration Team
-- All events consist of four additional parameters that Optimove captures
+- All events consist of four additional parameters that Optimove captures:
     - **UserId** - will only be shown if `setUserId()` was called successfully and a session is stored
     - **Event Platform** - your device platform (e.g. windows, mac, etc)
     - **Event Device Type** - your device type (e.g. desktop, mobile, etc)
