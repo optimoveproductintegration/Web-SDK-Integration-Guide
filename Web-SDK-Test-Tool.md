@@ -21,7 +21,7 @@ TODO: PHOTO 1
     - **Event Native Mobile** - whether your users visited from a mobile native app or not (e.g. true / false)
 - You have the option to "Clear Events" at any time
 
->- (Note*: The Test Tool currently does not display any errors (e.g. events / param missing, incorrect implementation, etc)
+>- Note*: The Test Tool currently does not display any errors (e.g. events / param missing, incorrect implementation, etc)
 
 ## Validating Optimove Core Events (part of the Basic SDK Implementation)
 All core events Event ID range from 1000-1099
