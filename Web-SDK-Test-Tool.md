@@ -19,6 +19,7 @@ TODO: PHOTO 1
     - **Event Device Type** - your device type (e.g. desktop, mobile, etc)
     - **Event OS** - your device operating system (e.g. Windows 10, MacBook, Android 10, iOS 13, etc)
     - **Event Native Mobile** - whether your users visited from a mobile native app or not (e.g. true / false)
+    - **UserId** - will only be shown if `setUserId()` was called successfully and a session is stored
 - You have the option to "Clear Events" at any time
 
 >- Note*: The Test Tool currently does not display any errors (e.g. events / param missing, incorrect implementation, etc)
