@@ -12,26 +12,26 @@ TODO: PHOTO 1
 - Events are only stored for 1 hour upon opening the Test Tool
 - Events are sorted ASC where the first event is at the top and last event is at the bottom
 - Each event will consist of 
-    - "Date" in Date + Time format
-    - "Event ID" and "Event Name" as was configured by the Optimove Product Integration Team
+    - **Date** in Date + Time format
+    - **Event ID** and "Event Name" as was configured by the Optimove Product Integration Team
 - All events consist of four additional parameters that Optimove captures
-    - Event Platform - your device platform (e.g. windows, mac, etc)
-    - Event Device Type - your device type (e.g. desktop, mobile, etc)
-    - Event OS - your device operating system (e.g. Windows 10, MacBook, Android 10, iOS 13, etc)
-    - Event Native Mobile - whether your users visited from a mobile native app or not (e.g. true / false)
+    - **Event Platform** - your device platform (e.g. windows, mac, etc)
+    - **Event Device Type** - your device type (e.g. desktop, mobile, etc)
+    - **Event OS** - your device operating system (e.g. Windows 10, MacBook, Android 10, iOS 13, etc)
+    - **Event Native Mobile** - whether your users visited from a mobile native app or not (e.g. true / false)
 - You have the option to "Clear Events" at any time
 
 >- (Note*: The Test Tool currently does not display any errors (e.g. events / param missing, incorrect implementation, etc)
 
 ## Validating Optimove Core Events (part of the Basic SDK Implementation)
 All core events Event ID range from 1000-1099
-1. *set_page_visit* - Created from the `setPageVisit()` SDK function
+1. **set_page_visit** - Created from the `setPageVisit()` SDK function
 TODO: PHOTO 2
-2. *page_category_event* - Derives from the set_page_visit event
+2. **page_category_event** - Derives from the set_page_visit event
 TODO: PHOTO 3
-3. *set_user_id* - Created from the `setUserId()` SDK function (as well a `registerUser`)
+3. **set_user_id** - Created from the `setUserId()` SDK function (as well a `registerUser`)
 TODO: PHOTO 4
-4. *set_user_email* - Created from the `SetUserEmail()` SDK function  (as well a `registerUser`)
+4. **set_user_email** - Created from the `SetUserEmail()` SDK function  (as well a `registerUser`)
 TODO: PHOTO 5
 
 ## Validating Custom Events
