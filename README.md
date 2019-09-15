@@ -115,6 +115,7 @@ If(SDK_ID != 'undefined') {
 > - Any **SDK_ID** that does not correspond to your Optimove unique identifier (Customer ID) due to faulty / unrecognized SDK_IDs will now be excluded from your customer tracked activity. Therefore please make sure that the SDK_ID sent via the SDK is a recognizable ID.
 > - The **SDK_ID** is a required variable and must be a "string" format.
 > - For  extra security purposes, you can also send the SDK_ID encrypted. Please follow the steps in “[Reporting encrypted CustomerIDs](https://github.com/optimove-tech/Reporting-Encrypted-CustomerID)".
+> - Call this function upon every page load/visit when you recognize the logged in user
 
 ### <a id="track-visits"></a>Tracking Page Visits
 
