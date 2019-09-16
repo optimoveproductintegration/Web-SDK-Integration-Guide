@@ -198,7 +198,7 @@ optimoveSDK.API.registerUser(SDK_ID, email)
 ```javascript
 // example variables
 var SDK_ID = 'JohnDoe';
-var emailAddress = 'johndoe@gmail.com';
+var email = 'johndoe@gmail.com';
 var eventName = 'sign-up';
 var parameters = {
       Newsletter_Signup : true,
