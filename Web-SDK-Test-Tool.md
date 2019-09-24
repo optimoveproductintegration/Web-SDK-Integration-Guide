@@ -1,7 +1,7 @@
-# Optimovegit Web SDK Test Tool Guide
+# Optimove's Web SDK Test Tool Guide
 The tool was created in order to help your engireeing person(s) see the data that is being set to Optimove within your website
 
-## Enabling the Test Tool
+## Enabling the Web Test Tool
 1. Open the Developer Tools in your browser
 2. Go to the Console tab
 3. Type in `optimoveSDK.API.openWebTestTool();` to display the Optimove SDK Web Test Tool
@@ -19,7 +19,7 @@ The tool was created in order to help your engireeing person(s) see the data tha
 - You have the option to "Clear Events" at any time
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/raw/maste/images/openWebTestTool-4.jpg?raw=true"></p>
 - All events consist of four additional parameters that Optimove captures:
-    - **UserId** - will only be shown if `setUserId()` was called successfully and a session is stored
+    - UserId: will only be shown if `setUserId()` was called successfully and a session is stored
     - **Event Platform** - your device platform (e.g. windows, mac, etc)
     - **Event Device Type** - your device type (e.g. desktop, mobile, etc)
     - **Event OS** - your device operating system (e.g. Windows 10, MacBook, Android 10, iOS 13, etc)
