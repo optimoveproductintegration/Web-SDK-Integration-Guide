@@ -21,11 +21,11 @@ The tool was created in order to help your engireeing person(s) see the data tha
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/raw/maste/images/openWebTestTool-4.jpg?raw=true"></p>
 
 - All events consist of four additional parameters that Optimove captures:
--- **UserId:** will only be shown if `setUserId()` was called successfully and a session is stored
--- **Event Platform:** your device platform (e.g. windows, mac, etc)
--- **Event Device Type:** your device type (e.g. desktop, mobile, etc)
--- **Event OS:** your device operating system (e.g. Windows 10, MacBook, Android 10, iOS 13, etc)
--- **Event Native Mobile:** whether your users visited from a mobile native app or not (e.g. true / false)
+    - **UserId:** will only be shown if `setUserId()` was called successfully and a session is stored
+    - **Event Platform:** your device platform (e.g. windows, mac, etc)
+    - **Event Device Type:** your device type (e.g. desktop, mobile, etc)
+    - **Event OS:** your device operating system (e.g. Windows 10, MacBook, Android 10, iOS 13, etc)
+    - **Event Native Mobile:** whether your users visited from a mobile native app or not (e.g. true / false)
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/raw/maste/images/openWebTestTool5-2.jpg?raw=true"></p>
 
 >- **Note**: The Test Tool currently does not display any errors (e.g. events / param missing, incorrect implementation, etc)
