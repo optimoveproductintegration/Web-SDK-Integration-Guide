@@ -16,8 +16,10 @@ The tool was created in order to help your engireeing person(s) see the data tha
     - **Date** in Date + Time format
     - **Event ID** and **Event Name*** as was configured by the Optimove Product Integration Team
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/raw/maste/images/openWebTestTool-3.jpg?raw=true"></p>
+
 - You have the option to "Clear Events" at any time
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/raw/maste/images/openWebTestTool-4.jpg?raw=true"></p>
+
 - All events consist of four additional parameters that Optimove captures:
 -- **UserId:** will only be shown if `setUserId()` was called successfully and a session is stored
 -- **Event Platform:** your device platform (e.g. windows, mac, etc)
