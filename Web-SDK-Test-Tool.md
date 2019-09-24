@@ -41,5 +41,5 @@ All core events Event ID range from 1000-1099
 ## Validating Custom Events
 - All custom events start with Event ID greater than 1100
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/images/openWebTestTool-7.jpg?raw=true"></p>
-
+<br/><br/>
 For any further questions, please contact your Optimove Product Integration Team.
