@@ -12,7 +12,7 @@
  	- [Reporting Custom Events](#custom-events) 
  
   - **Testing**
-	 - [Testing Web Events](#test-events)
+	 - [Web SDK Test Tool](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Web-SDK-Test-Tool.md)
   
   - **Addtional Tech Info**
 	 - [Optimove Webpage Pop-Up Tech Guide](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Webpage%20Pop-ups)
@@ -255,6 +255,3 @@ addToWishList('my wish list 1', 123456, 'product name', 1.99);
 >  - All monetary values must be reported in the same currency defined in your Optimove instance (e.g., if your instance is based on US dollars, all monetary event values must be reported in dollars). Optimove will not perform currency conversions.
 >  - If your Optimove instance supports multiple languages, all event parameters must use a single default language. This is required in order to maintain a unified set of events.
 >  
-
-### <a id="test-events"></a>Testing SDK Events
-With Optimove's [Web SDK Test Tool](https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/Web-SDK-Test-Tool.md), you are not able to test the Events you are sending into Optimove.
