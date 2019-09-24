@@ -26,7 +26,7 @@ The tool was created in order to help your engireeing person(s) see the data tha
     - **Event Device Type:** your device type (e.g. desktop, mobile, etc)
     - **Event OS:** your device operating system (e.g. Windows 10, MacBook, Android 10, iOS 13, etc)
     - **Event Native Mobile:** whether your users visited from a mobile native app or not (e.g. true / false)
-<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/images/openWebTestTool5-2.jpg?raw=true"></p>
+<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/images/openWebTestTool-5.jpg?raw=true"></p>
 
 >- **Note**: The Test Tool currently does not display any errors (e.g. events / param missing, incorrect implementation, etc)
 
