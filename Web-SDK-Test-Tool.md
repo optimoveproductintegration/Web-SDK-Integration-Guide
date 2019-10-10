@@ -2,10 +2,11 @@
 The tool was created in order to help your engireeing person(s) see the data that is being set to Optimove within your website
 
 ## Enabling the Web Test Tool
-1. Open the Developer Tools in your browser
-2. Go to the Console tab
-3. Type in `optimoveSDK.API.openWebTestTool();` to display the Optimove SDK Web Test Tool
-4. Once the Test Tool is open, you can close the DevTools
+1. Open your website where Optimove SDK is initializing
+2. Open the Developer Tools in your browser
+3. Go to the Console tab
+4. Type in `optimoveSDK.API.openWebTestTool();` to display the Optimove SDK Web Test Tool
+5. Once the Test Tool is open, you can close the DevTools
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/images/openWebTestTool-1.jpg?raw=true"></p>
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/master/images/openWebTestTool-2.jpg?raw=true"></p>
 
