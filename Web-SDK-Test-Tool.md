@@ -52,9 +52,12 @@ The four most common core events are:
 
 	1. **"Event Name is Unavailable.  Please check the configuration file and try again"** 
 			You will receive this error if an event was not pre-configured within your 			Optimove instance.  Please contact your product integration manager to add this event.
+			
 	2.   **"X parameter name is unavailable.  Please check the configuration file and try again**
 		You will receive this error if an event's parameter was not pre-configured within your 			Optimove instance.  Please contact your product integration manager to add this parameter within the event you were trying to send.
-		3. **"ERROR- Required paramMetadata X is missing "**
+		
+	3. **"ERROR- Required paramMetadata X is missing "**
 		If an event was pre-configured with certain required parameters and if one of these parameters was not sent within the event, you will encounter this error.  Please make sure to send a value for this parameter every time you report this event.   If this parameter is not required within that event, please contact your product integration manager to change the parameter to be defined as "optional". 
-		4. **ERROR- Parameter X should be of type X (string, boolean or number)**
+		
+	4. **ERROR- Parameter X should be of type X (string, boolean or number)**
 		If an event's parameter was pre-configured to be of type string, boolean or number and the value that was sent when the event was reported does not match the type it was defined for, you will encounter this error. Please make sure to send the correct data type for that parameter.   If that parameter should be set to be a different data type, please contact your product integration manager.    
