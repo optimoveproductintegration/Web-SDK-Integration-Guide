@@ -29,11 +29,11 @@ The Web SDK Test Tool (WSTT) was created in order to help your developers see th
    - **Page Category**
     
 
-<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-3.png?raw=true"></p>
+<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-4.png?raw=true"></p>
 
 >- **Note**: 
 		> Click Clear Events at any time to clear the list of reported events.
-<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-4.png?raw=true"></p>
+<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-3.png?raw=true"></p>
 
 ## Reviewing Optimove Core Events
 The four most common core events are:
@@ -44,7 +44,7 @@ The four most common core events are:
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-5.png?raw=true"></p>
 
 >- **Note**: 
->- The IDs for core events – those included as part of the basic Web SDK implementation – are all in the range of 1000-1099.
+		> The IDs for core events – those included as part of the basic Web SDK implementation – are all in the range of 1000-1099.
 
 ## Reviewing Custom Events
 - The IDs of all custom events are greater than 1100.
