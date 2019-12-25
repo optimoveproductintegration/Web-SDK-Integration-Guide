@@ -56,7 +56,7 @@ The four most common core events are:
 
 	1. **"Event Name is Unavailable. It has not been configured properly"** 
 			You will receive this error if an event was not pre-configured within your 			Optimove instance.  Please contact your product integration manager to add this event.
-	<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/WebSDKToolError-1.png?raw=true"></p>
+		<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/WebSDKToolError-1.png?raw=true"></p>
 			
 	2.   **"X parameter name is unavailable. It has not been configured properly**
 		You will receive this error if an event's parameter was not pre-configured within your 			Optimove instance.  Please contact your product integration manager to add this parameter within the event you were trying to send.
@@ -64,7 +64,7 @@ The four most common core events are:
 		
 	3. **"ERROR- Required paramMetadata X is missing "**
 		If an event was pre-configured with certain required parameters and if one of these parameters was not sent within the event, you will encounter this error.  Please make sure to send a value for this parameter every time you report this event.   If this parameter is not required within that event, please contact your product integration manager to change the parameter to be defined as "optional". 
-			<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/WebSDKToolError-3.png?raw=true"></p>
+		<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/WebSDKToolError-3.png?raw=true"></p>
 		
 	4. **ERROR- Parameter X should be of type X (string, boolean or number)**
-		If an event's parameter was pre-configured to be of type string, boolean or number and the value that was sent when the event was reported does not match the type it was defined for, you will encounter this error. Please make sure to send the correct data type for that parameter.   If that parameter should be set to be a different data type, please contact your product integration manager.    	<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/WebSDKToolError-4.png?raw=true"></p>
+		If an event's parameter was pre-configured to be of type string, boolean or number and the value that was sent when the event was reported does not match the type it was defined for, you will encounter this error. Please make sure to send the correct data type for that parameter.   If that parameter should be set to be a different data type, please contact your product integration manager.    		<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/WebSDKToolError-4.png?raw=true"></p>
