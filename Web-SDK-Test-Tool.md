@@ -18,6 +18,7 @@ The Web SDK Test Tool (WSTT) was created in order to help your developers see th
     - **Date** in Date+Time format
     - **Event ID** as configured by the Optimove Product Integration Team
     - **Event Name** as configured by the Optimove Product Integration Team
+    - **Content** which presents the event's parameters along with their values
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-2.png?raw=true"></p>
 
 - You can expand an event to see the event data sent to Optimove, including the different parameters sent within the event:
