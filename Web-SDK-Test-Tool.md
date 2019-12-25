@@ -39,14 +39,14 @@ The four most common core events are:
 2. **page_category_event** - Derives from the set_page_visit event
 3. **set_user_event** - Created by calling  the `setUserId()` or `registerUser` SDK functions
 4. **set_email_event** - Created by calling  the `SetUserEmail()` or `registerUser` SDK functions
-<p align="left"><img src="https://raw.githubusercontent.com/optimove-tech/Web-SDK-Integration-Guide/master/images/openWebTestTool-6.jpg?raw=true"></p>
+<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestTool-6-1.png?raw=true"></p>
 
 >- **Note**: 
 >- The IDs for core events – those included as part of the basic Web SDK implementation – are all in the range of 1000-1099.
 
 ## Reviewing Custom Events
 - The IDs of all custom events are greater than 1100.
-<p align="left"><img src="https://raw.githubusercontent.com/optimove-tech/Web-SDK-Integration-Guide/master/images/openWebTestTool-7.jpg?raw=true"></p>
+<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestTool-7-1.png?raw=true"></p>
 
 
 ## Error Types
