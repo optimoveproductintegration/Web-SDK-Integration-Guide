@@ -8,6 +8,7 @@ The Web SDK Test Tool (WSTT) was created in order to help your developers see th
 4. Type or paste in  `optimoveSDK.API.openWebTestTool();` to display the WSTT.
 4. Once the WSTT is open, you can close the Developer Tools.
 <p align="left"><img src="https://raw.githubusercontent.com/optimove-tech/Web-SDK-Integration-Guide/master/images/openWebTestTool-1.jpg?raw=true"></p>
+<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-1.png?raw=true"></p>
 
 
 ## Viewing Events & Parameters
@@ -17,7 +18,7 @@ The Web SDK Test Tool (WSTT) was created in order to help your developers see th
     - **Date** in Date+Time format
     - **Event ID** as configured by the Optimove Product Integration Team
     - **Event Name** as configured by the Optimove Product Integration Team
-<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestTool-3-1.png?raw=true"></p>
+<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-2.png?raw=true"></p>
 
 - You can expand an event to see the event data sent to Optimove, including the different parameters sent within the event:
     - **User ID** (only shown if setUserId(); was called successfully and a session is stored)
@@ -27,11 +28,11 @@ The Web SDK Test Tool (WSTT) was created in order to help your developers see th
    - **Page Category**
     
 
-<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestTool-4-1.png?raw=true"></p>
+<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-3.png?raw=true"></p>
 
 >- **Note**: 
 		> Click Clear Events at any time to clear the list of reported events.
-<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestTool-5-1.png?raw=true"></p>
+<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-4.png?raw=true"></p>
 
 ## Reviewing Optimove Core Events
 The four most common core events are:
@@ -39,14 +40,14 @@ The four most common core events are:
 2. **page_category_event** - Derives from the set_page_visit event
 3. **set_user_event** - Created by calling  the `setUserId()` or `registerUser` SDK functions
 4. **set_email_event** - Created by calling  the `SetUserEmail()` or `registerUser` SDK functions
-<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestTool-6-1.png?raw=true"></p>
+<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-5.png?raw=true"></p>
 
 >- **Note**: 
 >- The IDs for core events – those included as part of the basic Web SDK implementation – are all in the range of 1000-1099.
 
 ## Reviewing Custom Events
 - The IDs of all custom events are greater than 1100.
-<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestTool-7-1.png?raw=true"></p>
+<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-6.png?raw=true"></p>
 
 
 ## Error Types
