@@ -1,3 +1,4 @@
+
 # Optimove Web SDK Test Tool User Guide
 The Web SDK Test Tool (WSTT) was created in order to help your developers see the data that is being sent from your website to Optimove, using the Optimove Web SDK. Once launched within a browser window, all events sent to Optimove will appear in the WSTT panel.
 
@@ -48,8 +49,10 @@ The four most common core events are:
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-6.png?raw=true"></p>
 
 
+
 ## Errors
 - The Optimove Web SDK will report one of the following errors if there is a problem with how an event is reported to the SDK:
+
 
 	1. **Event Name undefined**
 	
