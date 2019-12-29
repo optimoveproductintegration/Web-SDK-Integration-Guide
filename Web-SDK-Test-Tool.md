@@ -18,21 +18,18 @@ The Web SDK Test Tool (WSTT) was created in order to help your developers see th
     - **Date** in Date+Time format
     - **Event ID** as configured by the Optimove Product Integration Team
     - **Event Name** as configured by the Optimove Product Integration Team
-    - **Content** which presents the event's parameters along with their values
+    - **Content** – the event's parameters and values
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-2.png?raw=true"></p>
 
-- You can expand an event to see the event data sent to Optimove, including the different parameters sent within the event:
-    - **User ID** (only shown if setUserId(); was called successfully and a session is stored)
-    Parameters for example:
-   - **Page URL**
-   - **Page Title**
-   - **Page Category**
+- You can expand an event to see the event data sent to Optimove, including the various parameters sent within the event:
     
 
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-4.png?raw=true"></p>
 
->- **Note**: 
-		> Click Clear Events at any time to clear the list of reported events.
+**Notes**: 
+ - User ID is only shown if setUserId(); was called successfully and a session is stored.
+ - Click Clear Events at any time to clear the list of reported events.
+		
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-3.png?raw=true"></p>
 
 ## Reviewing Optimove Core Events
@@ -43,28 +40,34 @@ The four most common core events are:
 4. **set_email_event** - Created by calling  the `SetUserEmail()` or `registerUser` SDK functions
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-5.png?raw=true"></p>
 
->- **Note**: 
-		> The IDs for core events – those included as part of the basic Web SDK implementation – are all in the range of 1000-1099.
+**Note that the IDs for core events – those included as part of the basic Web SDK implementation – are all in the range of 1000-1099.**
+
 
 ## Reviewing Custom Events
 - The IDs of all custom events are greater than 1100.
 <p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/openWebTestToolNew-6.png?raw=true"></p>
 
 
-## Error Types
- - If any of the core events/custom events that you are trying to send through Optimove's web SDK has an issue, you encounter one of the following error types
+## Errors
+- The Optimove Web SDK will report one of the following errors if there is a problem with how an event is reported to the SDK:
 
-	1. **"Event Name is Unavailable. It has not been configured properly"** 
-			You will receive this error if an event was not pre-configured within your 			Optimove instance.  Please contact your product integration manager to add this event.
+	1. **Event Name undefined**
+	
+		Only pre-configured event names may be reported. To add a new event, contact your Optimove product integration manager
+		
 		<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/WebSDKToolError-1.png?raw=true"></p>
 			
-	2.   **"X parameter name is unavailable. It has not been configured properly**
-		You will receive this error if an event's parameter was not pre-configured within your 			Optimove instance.  Please contact your product integration manager to add this parameter within the event you were trying to send.
-		<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/WebSDKToolError-2.png?raw=true"></p>	
+	2. **Parameter name undefined**
+	
+		Only pre-configured parameter names may be reported. To add a new parameter to a particular event, contact your Optimove product integration manager.
+		<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/WebSDKToolError-2.png?raw=true"></p>
 		
-	3. **"ERROR- Required paramMetadata X is missing "**
-		If an event was pre-configured with certain required parameters and if one of these parameters was not sent within the event, you will encounter this error.  Please make sure to send a value for this parameter every time you report this event.   If this parameter is not required within that event, please contact your product integration manager to change the parameter to be defined as "optional". 
+	3. **Required parameter data missing**
+	
+		If an event was pre-configured to require a certain parameter value and that parameter or value was not sent with the event, the SDK will not accept the reported event. If you want to make this parameter not required with the event, contact your Optimove product integration manager to change the parameter to be optional.
 		<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/WebSDKToolError-3.png?raw=true"></p>
 		
-	4. **ERROR- Parameter X should be of type X (string, boolean or number)**
-		If an event's parameter was pre-configured to be of type string, boolean or number and the value that was sent when the event was reported does not match the type it was defined for, you will encounter this error. Please make sure to send the correct data type for that parameter.   If that parameter should be set to be a different data type, please contact your product integration manager.    		<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/WebSDKToolError-4.png?raw=true"></p>
+	4. **Incorrect parameter data type**
+	
+		If an event's parameter was pre-configured to be of a particular type (e.g., string, numeric, Boolean) and the parameter value sent with the event was of a different type, the SDK will not accept the reported event. If you want to change the data type for a parameter, contact your Optimove product integration manager.
+		<p align="left"><img src="https://github.com/optimove-tech/Web-SDK-Integration-Guide/blob/LeslyOpti-branch1/images/WebSDKToolError-4.png?raw=true"></p>
