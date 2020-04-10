@@ -11,7 +11,6 @@
 //Trigger: When a website user adds an item to cart, send ALL the items in the cart to Optimove. This will start the cart abandonment timer.
 //Note: The below was created under the assumption that you hold the cart items in an array "yourCartItemsArray".
 //Note: The items_total_price should derive from your code based on the total prices of all the items x quantity in the cart.
-//Note: Optimove currently supports up to 19 parameters in total for an event. Please make sure you do not exceed 19 parameters in total.
 
 var i;
 var itemsObject = {};
