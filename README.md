@@ -179,13 +179,13 @@ In all situations where a single user action requires you to set both the custom
 ```javascript
 // SDK_ID: the unique/primary customer ID used by your website to identify registered customers/users - (string, required)
 // email: user’s email address (string, required)
-// eventName: name of the event during which the SDK_ID and email address were captured (string, optional)
+// event_name: name of the event during which the SDK_ID and email address were captured (string, optional)
 // parameters: an array of details for the specified event name (integer/string ,optional)
-optimoveSDK.API.registerUser(SDK_ID, email, eventName, parameters);
+optimoveSDK.API.registerUser(SDK_ID, email, event_name, parameters);
 ```
 >**Note:** 
 > - Event names will be pre-registered in Optimove by your CSM. 
-> - You can include optional custom eventName and parameters values in this function call which equivalent to calling the [reportEvent()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#custom-events) function.
+> - You can include optional custom event_name and parameters values in this function call which equivalent to calling the [reportEvent()](https://github.com/optimove-tech/Web-SDK-Integration-Guide#custom-events) function.
 
 **Example usage 1:** SDK_ID and email address without events:
 ```javascript
@@ -202,14 +202,14 @@ optimoveSDK.API.registerUser(SDK_ID, email)
 // example variables
 var SDK_ID = 'JohnDoe';
 var email = 'johndoe@gmail.com';
-var eventName = 'sign-up';
+var event_name = 'sign-up';
 var parameters = {
-      Newsletter_Signup : true,
-      Landing_Page : 'some/landing/page.html'
+      newsletter_signup : true,
+      landing_page : 'some/landing/page.html'
 }
 
 // passing the variables to the SDK function
-optimoveSDK.API.registerUser(SDK_ID , email, eventName, parameters);
+optimoveSDK.API.registerUser(SDK_ID , email, event_name, parameters);
 ```
 
 
@@ -230,7 +230,7 @@ optimoveSDK.API.reportEvent(<event_name>, <parameter JS object>);
 ```
 
 
-Eample usage:
+Example usage:
 ```javascript
 // an function for adding a product to a specific wish list
 function addToWishList(list_name, pid, pname, price) {
@@ -239,7 +239,7 @@ function addToWishList(list_name, pid, pname, price) {
 	   params['pid'] = pid;
 	   params['name'] = pname;
 	   params['price'] = price;
-   optimoveSDK.API.reportEvent ('Add_To_Wishlist', params);
+   optimoveSDK.API.reportEvent ('add_to_wishlist', params);
 }
 
 // calling the add to wish list function with the relavant data
@@ -247,7 +247,7 @@ addToWishList('my wish list 1', 123456, 'product name', 1.99);
 ```
 >**Note:**
 >  - Event and parameter names are case sensitive.
->  - Events and parameters use snake_case as a naming convention. Separate each word with one underscore character (_) and no spaces. (e.g., Checkout_Completed)
+>  - Events and parameters use lowercase and snake_case as a naming convention. Separate each word with one underscore character (_) and no spaces. (e.g., checkout_completed)
 >  - The parameter types available for use in event-reporting functions are:<br/>
 > **String**  – A series of alphanumeric characters of up to 255 characters in length, using any encoding<br/>
 > **Number**  – Any numeric value, whether an integer or a value containing a decimal point<br/>
