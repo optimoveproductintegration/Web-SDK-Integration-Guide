@@ -17,7 +17,7 @@
   - **Addtional Tech Info**
 	 - [Optimove Webpage Pop-Up Tech Guide](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Webpage%20Pop-ups)
 	- [Technical Web SDK Integration Flows](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web%20SDK%20Tech%20Flows)
- 	- [General SDK Code Snippets](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web-SDK-Code-Snippets) 
+ 	- [Web SDK Basic Code Setups](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/Web-SDK-Basic-Code-Setup#optimove-basic-web-sdk-setup-using-google-tag-manager-gtm) 
  	- [eCommerce Use Cases Code Snippets](https://github.com/optimove-tech/Web-SDK-Integration-Guide/tree/master/eComm-Use-Cases-Code-Snippets) 
 ----------
 
