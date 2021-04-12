@@ -6,8 +6,8 @@
 		 - [Tracking Page Visits for Visitors](#track-visits-visitors) 
 		 - [Reporting/Updating User Email Addresses](#record-email) 
 	- **Implementation for Customers (identified users)**
+	  	- [Stitching Website Visitors to Registered Customer IDs ](#link-visit-customer) 
 	  	- [Registering the User ID and User Email at the Same Time](#record-user-email) 
-	    - [Stitching Website Visitors to Registered Customer IDs ](#link-visit-customer) 
 		- [Tracking Page Visits for Customers](#track-visits-customers) 
 
   - **Advanced Setup**
@@ -178,7 +178,47 @@ updateSDKUserEmail (email,callback);
 >- The "email" is a required variable and must be a "string" format. <br/>
 
 ### <a id="customers"></a>Implementation for Customers (identified users)<br/>
+### <a id="link-visit-customer"></a>Stitching Website Visitors to Registered Customer IDs
+Optimove distinguishes between unknown website visitors, website visitors that have converted today, and customers.
+Unknown website visitors are entities that are allocated a temporary ID by Optimove's SDK.
+Customers are entities that are allocated a customer ID by a system external to Optimove. The bulk of the information related to these customers is received through the daily ETL process.
+Visitors that have converted today are entities that are in transition between the two states above. Information on these entities has not yet been received through the daily ETL, however, a customer ID has been allocated.
+The **setUserId()** function notifies the Optimove system that a visitor has been converted into a customer. These customers can be targeted with a Triggered Campaign that is set on the “Converted Today” Target Group on the day of conversion, or any Customer Target Group in the following days.
+In order for all event reporting and realtime functions to be properly associated with the correct individual customer, the **setUserId**(SDK_ID) function must be called whenever a customer initially registers (or, alternatively, the [registerUser](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-user-email)() function) or logs into the website. 
 
+**Example usage 1:** SDK_ID without callback function
+```javascript
+// The SDK_ID refers to the unique/primary customer ID used by your website to identify registered customers/users. 
+var SDK_ID = '123456';
+
+// Only call the setUserID() if registered / identified customers **is not** empty, null, unidentified. 
+// SDK_ID: (string, required)
+If(SDK_ID !== undefined && SDK_ID !== null && SDK_ID !== "") {
+	optimoveSDK.API.setUserId(SDK_ID);
+}
+```
+**Example usage 2:** SDK_ID with callback function
+```javascript
+// The SDK_ID refers to the unique/primary customer ID used by your website to identify registered customers/users. 
+var SDK_ID = '123456'; 
+
+//example callback 
+var callback = function() { 
+optimoveSDK.API.reportEvent('login',{});  
+
+// Only call the setUserID() if registered / identified customers **is not** empty, null, unidentified. 
+// SDK_ID: (string, required) 
+If(SDK_ID !== undefined && SDK_ID !== null && SDK_ID !== "") { 
+optimoveSDK.API.setUserId(SDK_ID,callback); 
+}
+```
+
+>**Note:** 
+> - The **SDK_ID** must match your Customer ID (CID) your are sending Optimove on a daily basis  and is is also used to identify individual customer records within your Optimove customer database.
+> - Any **SDK_ID** that does not correspond to your Optimove unique identifier (Customer ID) due to faulty / unrecognized SDK_IDs will now be excluded from your customer tracked activity. Therefore please make sure that the SDK_ID sent via the SDK is a recognizable ID.
+> - The **SDK_ID** is a required variable and must be a "string" format.
+> - For  extra security purposes, you can also send the SDK_ID encrypted. Please follow the steps in “[Reporting encrypted CustomerIDs](https://github.com/optimove-tech/Reporting-Encrypted-CustomerID)".
+> - **In order to ensure the correct order of arrival, you can utilize the Optimove SDK callback functions.**
 ### <a id="record-user-email"></a>Registering the User ID and User Email at the Same Time
 A common scenario in which you may want to reach out to your visitors immediately is upon their registration to receive email communications.
 
@@ -248,47 +288,7 @@ optimoveSDK.API.registerUser(SDK_ID , email, event_name, parameters, callback);
 >- **In order to ensure the correct order of arrival, utilize the Optimove SDK callback functions.**
 
 
-### <a id="link-visit-customer"></a>Stitching Website Visitors to Registered Customer IDs
-Optimove distinguishes between unknown website visitors, website visitors that have converted today, and customers.
-Unknown website visitors are entities that are allocated a temporary ID by Optimove's SDK.
-Customers are entities that are allocated a customer ID by a system external to Optimove. The bulk of the information related to these customers is received through the daily ETL process.
-Visitors that have converted today are entities that are in transition between the two states above. Information on these entities has not yet been received through the daily ETL, however, a customer ID has been allocated.
-The **setUserId()** function notifies the Optimove system that a visitor has been converted into a customer. These customers can be targeted with a Triggered Campaign that is set on the “Converted Today” Target Group on the day of conversion, or any Customer Target Group in the following days.
-In order for all event reporting and realtime functions to be properly associated with the correct individual customer, the **setUserId**(SDK_ID) function must be called whenever a customer initially registers (or, alternatively, the [registerUser](https://github.com/optimove-tech/Web-SDK-Integration-Guide#record-user-email)() function) or logs into the website. 
 
-**Example usage 1:** SDK_ID without callback function
-```javascript
-// The SDK_ID refers to the unique/primary customer ID used by your website to identify registered customers/users. 
-var SDK_ID = '123456';
-
-// Only call the setUserID() if registered / identified customers **is not** empty, null, unidentified. 
-// SDK_ID: (string, required)
-If(SDK_ID !== undefined && SDK_ID !== null && SDK_ID !== "") {
-	optimoveSDK.API.setUserId(SDK_ID);
-}
-```
-**Example usage 2:** SDK_ID with callback function
-```javascript
-// The SDK_ID refers to the unique/primary customer ID used by your website to identify registered customers/users. 
-var SDK_ID = '123456'; 
-
-//example callback 
-var callback = function() { 
-optimoveSDK.API.reportEvent('login',{});  
-
-// Only call the setUserID() if registered / identified customers **is not** empty, null, unidentified. 
-// SDK_ID: (string, required) 
-If(SDK_ID !== undefined && SDK_ID !== null && SDK_ID !== "") { 
-optimoveSDK.API.setUserId(SDK_ID,callback); 
-}
-```
-
->**Note:** 
-> - The **SDK_ID** must match your Customer ID (CID) your are sending Optimove on a daily basis  and is is also used to identify individual customer records within your Optimove customer database.
-> - Any **SDK_ID** that does not correspond to your Optimove unique identifier (Customer ID) due to faulty / unrecognized SDK_IDs will now be excluded from your customer tracked activity. Therefore please make sure that the SDK_ID sent via the SDK is a recognizable ID.
-> - The **SDK_ID** is a required variable and must be a "string" format.
-> - For  extra security purposes, you can also send the SDK_ID encrypted. Please follow the steps in “[Reporting encrypted CustomerIDs](https://github.com/optimove-tech/Reporting-Encrypted-CustomerID)".
-> - **In order to ensure the correct order of arrival, you can utilize the Optimove SDK callback functions.**
 
 ### <a id="track-visits-customers"></a>Tracking Page Visits for Customers
 
