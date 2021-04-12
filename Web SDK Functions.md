@@ -10,9 +10,3 @@
 |setPageVisit: (customURLIn, pageTitleIn, categoryIn)|Defining page visit event	|`optimoveSDK.API.setPageVisit('www.test.com','test','category test');`|
 |openWebTestTool|Open web sdk test tool|`optimoveSDK.API.openWebTestTool();`|
 |closeWebTestTool|Close web sdk test tool|`optimoveSDK.API.closeWebTestTool();`|
-|setRealTimeOptions|set options for web popup campaign|setRealtimeOptions({  
-  showDimmer: true,  
-  showWatermark: true,  
-  reportEventCallback: function()  
-})|
-|showRealtimePopup|show realtime webpage popup |`optimoveSDK.API.showRealtimePopup();`|
